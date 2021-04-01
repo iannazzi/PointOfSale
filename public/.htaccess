@@ -8,8 +8,8 @@ php_value max_input_vars 3000
 #DirectoryIndex index.php
 
 # RewriteEngine on
-# RewriteCond %{HTTP_HOST} ^www\.embrasse\-moi\.com\/POS$
-# RewriteRule ^(.*)$ "http\:\/\/embrasse\-moi\.com\/POS\/$1" [R=301,L]
+# RewriteCond %{HTTP_HOST} ^www\.WEBSITENAME\-moi\.com\/POS$
+# RewriteRule ^(.*)$ "http\:\/\/WEBSITENAME\-moi\.com\/POS\/$1" [R=301,L]
 
 # 	http://query7.com/php-regular-expresssion-url-router
 # RewriteRule !\.(js|ico|txt|gif|jpg|png|css)$ index.php
