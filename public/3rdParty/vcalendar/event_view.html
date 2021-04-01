@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:cal_event_view}</title>
+<link href="Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet"></head>
+<body>
+{header} 
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">{vertical_menu}</td> 
+    <td valign="top">
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <!-- BEGIN Grid eventGrid -->
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                <th>{event_title}</th>
+ 
+                <td class="HeaderRight"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+              </tr>
+ 
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td><b>{event_date} 
+                  <!-- BEGIN Label event_time -->, {event_time}<!-- END Label event_time -->
+                  <!-- BEGIN Label event_time_end -->- {event_time_end} <!-- END Label event_time_end --></b><br>
+                  <!-- BEGIN Label category_id --><b>{res:cal_category}:</b> {category_id}. <br>
+                  <!-- END Label category_id --><b>{res:cal_addedby}:</b> {user_id}<br>
+                  <br>
+                  {event_desc} 
+                  <!-- BEGIN Panel PanelLocation --><br>
+                  <br>
+                  <b>{LabelLocation}:</b> {event_Location}<!-- END Panel PanelLocation -->
+                  <!-- BEGIN Panel PanelCost --><br>
+                  <br>
+                  <b>{LabelCost}:</b> {event_Cost}<!-- END Panel PanelCost -->
+                  <!-- BEGIN Panel PanelURL --><br>
+                  <br>
+                  <b>{LabelURL}:</b> <a href="{event_URL_Src}">{event_URL}</a><!-- END Panel PanelURL -->
+                  <!-- BEGIN Panel PanelTextBox1 --><br>
+                  <br>
+                  <b>{LabelTextBox1}:</b> {event_TextBox1}<!-- END Panel PanelTextBox1 -->
+                  <!-- BEGIN Panel PanelTextBox2 --><br>
+                  <br>
+                  <b>{LabelTextBox2}:</b> {event_TextBox2}<!-- END Panel PanelTextBox2 -->
+                  <!-- BEGIN Panel PanelTextBox3 --><br>
+                  <br>
+                  <b>{LabelTextBox3}:</b> {event_TextBox3}<!-- END Panel PanelTextBox3 -->
+                  <!-- BEGIN Panel PanelTextArea1 --><br>
+                  <br>
+                  <b>{LabelTextArea1}</b> {event_TextArea1}<!-- END Panel PanelTextArea1 -->
+                  <!-- BEGIN Panel PanelTextArea2 --><br>
+                  <br>
+                  <b>{LabelTextArea2}:</b> {event_TextArea2}<!-- END Panel PanelTextArea2 -->
+                  <!-- BEGIN Panel PanelTextArea3 --><br>
+                  <br>
+                  <b>{LabelTextArea3}:</b> {event_TextArea3}<!-- END Panel PanelTextArea3 -->
+                  <!-- BEGIN Panel PanelCheckBox1 --><br>
+                  <br>
+                  <b>{LabelCheckBox1}:</b> {event_CheckBox1}<!-- END Panel PanelCheckBox1 -->
+                  <!-- BEGIN Panel PanelCheckBox2 --><br>
+                  <br>
+                  <b>{LabelCheckBox2}:</b> {event_CheckBox2}<!-- END Panel PanelCheckBox2 -->
+                  <!-- BEGIN Panel PanelCheckBox3 --><br>
+                  <br>
+                  <b>{LabelCheckBox3}:</b> {event_CheckBox3}<!-- END Panel PanelCheckBox3 --><br>
+                  <img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0" width="400" height="1"></td> 
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN Panel edit -->
+              <tr class="Row">
+                <td align="right"><a href="{edit_event_Src}">{res:cal_edit_event}</a></td> 
+              </tr>
+ <!-- END Panel edit -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td>{res:CCS_NoRecords}</td> 
+              </tr>
+ <!-- END NoRecords -->
+            </table>
+            <!-- END Grid eventGrid --></td> 
+        </tr>
+ 
+      </table>
+    </td> 
+    
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

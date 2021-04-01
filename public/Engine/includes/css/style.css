@@ -1,0 +1,1392 @@
+/*
+	Author	:	Craig Iannazzi
+	originally from:  christopher@edg3.co.uk
+	Website	:	http://www.edg3.co.uk/
+*/
+
+/* just a few points to remember: #id, .class so id="name" styles with #name class = "myElement" styles with .myElement */
+/* margin:10px 5px 15px 20px;
+
+    * top margin is 10px
+    * right margin is 5px
+    * bottom margin is 15px
+    * left margin is 20px
+    
+    BOX MODEL: CONTENT PADDING BORDER MARGIN
+    
+    MARGIN pads the element away from other elements
+    PADDING will pad the contents away from the border
+   
+   PRIORITY: 4 is the highest meaning items in 4 will replace 3,2,1...
+   1. Browser default
+   2. External style sheet
+   3. Internal style sheet (in the head section)
+   4. Inline style (inside an HTML element)
+
+	Consider these rules when possible... for table layout I found I have to use pixel size
+	DO NOT USE FONT SIZE, USE em
+	DO NOT USE PIXEL SIZE FOR LAYOUT, USE PERCENTAGES
+*/
+	* {
+		border:0;
+		margin:0;
+		padding:0;
+	}	
+	/* Header styles */
+	#header {
+		/* this can be changed to a percentage, but is generally best to leave at 1024px */
+		/*position: fixed;*/
+		width:95%;
+		border-bottom:1px solid #888;
+		padding:0px;
+		margin:0 auto;
+		
+	}
+	#header_table
+	{
+		width:100%;
+		vertical-align: bottom;
+	 	padding: 0;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+    	border-style: none;
+	}
+	#header_table td
+	{
+		color: #999;
+		font-size:0.8em;
+		/*width: 33.33%;*/
+	}
+	
+	.logo
+	{
+		color:#bbb;
+		font-size:1em;
+		letter-spacing:0px;
+		padding:0px;
+		margin-bottom: 0px;
+		font-family:"Times New Roman";
+		text-align:right;
+	
+	}
+.highlight {background-color:yellow;}
+.highlight_red {background-color:red;}
+.highlight_green {background-color:#00FF33;}
+	.footer_table
+	{
+			width:100%;
+		vertical-align: bottom;
+	 	padding: 0;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+    	border-style: none;
+    }
+	
+/* Page Layout */
+/* http://learnlayout.com/position-example.html */
+
+
+/* Form Elements */
+	
+input[readonly="readonly"]
+{
+    color:#999;
+}
+
+
+
+/* index page settings */
+.settingsSpace
+{
+	clear:both;
+	padding-left:24px;
+	padding-top:10px;
+}
+.settingsSpace a
+{
+	color: #000;
+}	
+.settingsSpace ul
+{
+	float:left;
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+.settingsSpace ul li
+{
+	float:left;
+	width:100px;
+	height:25px;
+	padding:0px 5px 0px 5px;
+
+}
+.settingsItem
+{
+	float:left;
+	width:275px;
+	padding-bottom:10px;
+	margin:10px 10px 10px 0px;
+	height:40px;
+}
+.settingsItemIcon
+{
+	width:20px;
+	float:left;
+	margin-right:10px;
+}
+.settingsItemLink
+{
+	width:230px;
+	float:left;
+	font-weight:bold;
+}
+.settingsItemComment
+{
+	clear:both;
+	font-size:11px;
+	color:gray;
+	font-weight:normal;
+}
+  
+
+	
+/*********************************** general ********************************************************************/
+	.a_message:visited
+	{
+		color:#C00;
+		font-weight: bold;
+	}
+	.a_message:link
+	{
+		color:red;
+		font-weight: bold;
+	}
+	.a_message:hover
+	{
+			color:#C00;
+		font-weight: bold;
+		text-decoration:none;
+	}
+	.main_a 
+	{
+		color:#777;
+		text-decoration:none;
+	}
+	
+	.main_a:hover 
+	{
+		color:#FFF;
+		text-decoration:none;
+	}
+	a:link {color:#777;}    /* unvisited link */
+	a:visited {color:#777;} /* visited link */
+	a:hover {color:#FFF;background-color:#000;}   /* mouse over link */
+	a:active {color:#000;}  /* selected link */
+	
+.widget
+{
+	font:1em Arial, Helvetica, "bitstream vera sans", sans-serif;
+}	
+.widget input
+{
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+	/* body */
+	body {
+		background:#ffffff;
+		color:#555;
+		font:0.8em Arial, Helvetica, "bitstream vera sans", sans-serif;
+	}
+	
+		/* column container */
+	.small_print {font: 0.7em;}
+
+	
+	/* content */
+	#content {
+		height:auto;
+		margin:0 auto;
+		padding:0 0 20px;
+		width:95%;
+	}
+	#content h1 {
+		font-size:1.4em;
+		padding:0px 0 0;
+	}
+	#content p {
+		padding:5px 0px 0;
+	}
+	
+	
+	/* footer */
+	#footer {
+		border-top:1px solid #999; 
+		height:50px;
+		margin:0px auto;
+		text-align:center;
+		width:95%;
+		font-size:0.8em;
+		padding:0px;
+		color: rgb(200,200,200);
+		clear:both;
+	}
+	
+	.error {
+		font-weight: bold;
+		color: #C00;
+	}
+	.warning {
+		font-weight: bold;
+		color: rgb(0,0,255);
+	}
+.return_message {
+		font-weight: bold;
+		color: rgb(200,0,0);
+	}
+	.directory {
+		font-weight: bold;
+		color: rgb(0,0,255);
+		font-family: Arial;
+		font-size:12px;
+		letter-spacing:0px;
+		text-align:center;
+		padding:5px;
+		margin-bottom:-10px;
+		}
+	.file
+	{
+		font-family: Arial;
+		color:rgb(50,50,50);
+		font-size:12px;
+		letter-spacing:0px;
+		text-align:center;
+		padding:5px;
+		margin-bottom:-10px;
+		}
+/*************** My sql array table ****************************/
+.mysql_data_array_table
+{		
+		padding: 0px 0px 0px 0px;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+}
+.mysql_data_array_table tbody 
+{
+	   margin: 0;
+	   padding: 0;
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+		line-height:1em;
+		text-align:center;
+		font-size:0.8em;
+		/*vertical-align: bottom;*/
+}
+.mysql_data_array_table tbody input
+{
+	color:black;
+	text-align:center;
+	width:100%;
+}
+.mysql_data_array_table tbody td
+{
+		text-align:center;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+
+.mysql_data_array_table .lined_cell
+{
+		text-align:center;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+.mysql_data_array_table tfoot td
+{
+		
+	
+	   border-top: 0px none rgb(255,25,25); 
+		border-left:  0px none rgb(255,25,25); 
+		border-right:  0px none rgb(255,25,25); 
+		border-bottom:  0px none rgb(255,25,25);
+}
+.mysql_data_array_table thead th
+{
+		padding: 0px 10px 0px 10px;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+.mysql_data_array_table .product_subid
+{
+
+	padding: 0px 10px 0px 10px;
+}
+.mysql_data_array_table   tbody tr:nth-child(even) {background: RGB(240,240,240)}
+.mysql_data_array_table  tbody tr:nth-child(odd) {background: #FFF}
+		
+/**************** General table - for displaying 100% width records, no table lines **************/		
+.textareaTable
+{
+	width: 100%;
+	padding: 0px 0px 0px 0px;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+}
+.textareaTable tbody 
+{
+	   margin: 0;
+	   padding: 0;
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+		line-height:1em;
+		text-align:center;
+		font-size:0.8em;
+		/*vertical-align: bottom;*/
+}
+.textareaTable tbody td
+{
+		text-align:left;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+.textareaTable thead th
+{
+		text-align:left;
+		padding: 0px 0px 0px 0px;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+.generalTable 
+{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-width: 0 0 0px 0px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-style: none;
+}
+.generalTable th
+{
+	text-align:center;
+	border-bottom:  1px solid rgb(50,50,50); 
+}
+.generalTable td
+{
+	text-align:center;
+	vertical-align: middle;
+	word-wrap:break-word;
+	padding: 1px 2px 1px 2px;
+	margin: 0px;
+}
+.generalTableTotalsRow
+{
+	background-color:yellow;
+	border-bottom:1px solid rgb(50,50,50);
+}
+.generalTable tbody tr:nth-child(even) {background: RGB(240,240,240);}
+.generalTable tbody tr:nth-child(odd) {background: #FFF;}
+  	.generalTable tr:hover td { background: #CCC; }
+
+
+/***********Single Row table************************/
+	.singleTable 
+	{
+	 	padding: 0;
+		margin: 0;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+   		border-spacing: 0;
+    	border-collapse: collapse;
+	}
+	.singleTable th
+	{
+		text-align:left;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  0px solid rgb(50,50,50); 
+	   padding: 0px 10px 0px 10px;
+	   margin: 1px 1px 1px 1px;
+	}
+	.singleTable td
+	{
+		text-align:left;
+		vertical-align: bottom;
+		padding: 0px 2px 0px 2px;
+		margin: 0px;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+	}
+
+/***********lined table************************/
+	.linedTable 
+	{
+	 	padding: 0;
+		margin: 0;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+   		border-spacing: 0;
+    	border-collapse: collapse;
+	}
+	.linedTable th
+	{
+		text-align:left;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  0px solid rgb(50,50,50); 
+	   padding: 0px 10px 0px 10px;
+	   margin: 1px 1px 1px 1px;
+	}
+	.linedTable td
+	{
+		text-align:left;
+		vertical-align: bottom;
+		padding: 0px 10px 0px 10px;
+		margin: 0px;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+	}
+	 .linedTable textarea{
+		width: 100%;
+		height: 15px;
+		border-width: 0;
+		margin: 0;
+		font-size:8px;
+		padding: 0;
+		overflow:auto;
+	}
+.linedTable   tbody tr:nth-child(even) {background: RGB(240,240,240)}
+.linedTable  tbody tr:nth-child(odd) {background: #FFF}
+.linedTable tr:hover td {background: #CCC;}
+
+/***************************Mysql Generic table *******************************************/
+.mergerTable
+{padding: 0;margin: 0;border-collapse: collapse;}
+.mergerTable tbody
+{border-collapse: collapse;}
+
+.mergerTable tbody
+{
+	vertical-align: top;
+
+}
+	.mysqlTable 
+	{
+	 	padding: 0;
+		margin: 1px 1px 1px 1px;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+   		border-spacing: 0;
+    	border-collapse: collapse;
+	}
+	.mysqlTable th
+	{
+		text-align:left;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  0px solid rgb(50,50,50); 
+	   border-bottom:  0px solid rgb(50,50,50); 
+	   padding: 1px;
+	   /*width: 140px;*/
+	}
+	.mysqlTable td textarea select input
+	{
+		padding: 0px 0px 0px 0px;
+	}	
+	.mysqlTable textarea
+	{
+		width: 100%;
+		height: 15px;
+		border-width: 0;
+		margin: 0;
+		font-size:8px;
+		padding: 0;
+		overflow:auto;
+	}
+	.mysqlTable .regular_textarea
+	{
+		width: 400px;
+		height: 15em;
+		border-width: 0;
+		margin: 0;
+		font-size:0.9em;
+		padding: 0;
+		overflow:visible;
+	}
+	.mysqlTable .big_textarea
+	{
+		width: 100%;
+		height: 15em;
+		border-width: 0;
+		margin: 0;
+		font-size:1.5em;
+		padding: 0;
+		overflow:visible;
+	}
+	.mysqlTable input
+	{
+		width:100%;
+	}
+	.mysqlTable td
+	{
+		text-align:left;
+		vertical-align: bottom;
+		padding: 0px 4px 0px 4px;
+		margin: 0px;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+	}
+.mysqlTable   tbody tr:nth-child(even) {background: RGB(240,240,240)}
+.mysqlTable  tbody tr:nth-child(odd) {background: #FFF}
+
+.mysql_table_divider_no_line
+{ 
+	padding: 10px 5px 10px 5px;
+	margin: 0px 0px 5px 0px;
+}
+.mysql_table_divider
+{
+	border-top:1px solid #CCC;  
+	padding: 10px 5px 10px 5px;
+	margin: 0px 0px 5px 0px;
+}
+.tight_divider
+{
+	border-top:1px solid #CCC;  
+	padding: 1px 1px 0px 1px;
+	margin: 0px 0px 0px 0px;
+}
+
+.bottom_line_tight_divider
+{
+	border-bottom:1px solid #CCC;  
+	padding: 1px 1px 0px 1px;
+	margin: 0px 0px 0px 0px;
+}
+.no_line_tight_divider
+{
+	border:0px none #CCC;  
+	padding: 1px 1px 0px 1px;
+	margin: 0px 0px 0px 0px;
+}
+.verticle_top_pad_div
+{ 
+	padding: 20px 0px 0px 0px;
+}
+
+
+/*****************SEARCh TABLE - NAME SAYS IT ALL ****************************************/
+
+.search_div
+{
+	border-top:1px solid #CCC; 
+	border-bottom: 1px solid #CCC; 
+	padding: 10px 5px 10px 5px;
+	margin: 0px 0px 5px 0px;
+}
+
+.search_table
+{
+		/*table-layout: fixed;*/
+		width:100%;
+		font-family:verdana,arial,helvetica,sans-serif; 
+		padding: 0;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+    	border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+
+}
+.search_table thead th
+{
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+	   
+}
+.search_table tbody td 
+{
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+	   
+}
+.search_table tbody input[type=checkbox] {
+   	width: auto;
+    margin: 0 auto;
+   /* display: block;*/
+    text-align:center; vertical-align:middle;
+}
+.search_table tbody input 
+{
+	width:100%;
+	text-align: center;
+}
+.search_table tbody select 
+{
+	width:100px;
+}
+	
+/*********************************** Generic Data Table  ********************************************************************/
+
+.dataTable
+{
+		/*width:100%;*/
+		font-family:verdana,arial,helvetica,sans-serif; 
+		padding: 0;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+    	border-style: none;
+	}
+	.dataTable  th
+	{
+	   margin: 0;
+	   padding: 0;
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+	   border-style: solid;
+
+		line-height:10px;
+		text-align:center;
+		font-size:10px;
+
+	}
+	/*
+	this will switch the colors on table rows - somethimes it seems flakey
+	.dataTable tbody tr:nth-child(even) {background: RGB(240,240,240)}
+	.dataTable tbody tr:nth-child(odd) {background: #FFF}
+	*/
+
+	.dataTable tbody td
+	{
+		 
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+
+		text-align:left;
+		vertical-align: top;
+		padding: 0px;
+		margin: 0px;
+	}
+	.dataTable tfoot td
+	{
+		 
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+
+		text-align:center;
+		vertical-align: bottom;
+		padding: 0px;
+		margin: 0px;
+		/*line-height:10px;
+		
+		font-size:10px;*/
+	}
+	
+	.dataTable textarea
+	{
+		width: 100%;
+		height: 15px;
+		border-width: 0;
+		margin: 0;
+		font-size:8px;
+		padding: 0;
+		overflow:auto;
+	}
+	.dataTable select
+	{
+		width:10em;
+	}
+	.checkbox_class
+	{
+		margin: 0;
+		padding: 0px 4px 0px 4px;
+		
+	}
+	.checkbox
+	{
+		padding: 0px 4px 0px 4px;
+	}
+	.radio
+	{
+		padding: 0px 4px 0px 4px;
+		margin: 0px 4px 0px 4px;
+	}
+	.lined_input
+	{
+		border: 1px solid black;
+	}
+	.textarea_comments
+	{
+	width: 100%;
+		height: 100px;
+		border: 1px solid black;
+		margin: 0;
+		font-size:1em;
+		padding: 0;
+		overflow:visible;
+	}
+	.admin_button
+	{
+		width: 100px;
+		padding: 2px 8px; 
+		margin: 2px 4px 6px 0px; 
+		background:red;
+		border:1px solid #000;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		
+		
+		-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	}
+	.admin_button:hover
+	{
+	  background: black;
+	  color: white;
+	  	 cursor: pointer;
+
+	}
+	.button
+	{
+		width: 100px;
+		padding: 2px 8px; 
+		margin: 2px 4px 6px 0px; 
+		
+		border:1px solid #000;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		
+		
+		-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	}
+	.group_button
+	{
+		background:rgb(200,200,255);
+	}
+	.iphone_button
+	{
+		width: 100px;
+		height:100px;
+		padding: 2px 8px; 
+		margin: 2px 4px 6px 0px; 
+		
+		border:1px solid #000;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		
+		
+		-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	}
+	.button:hover
+	{
+	  background: black;
+	  color: white;
+	  	 cursor: pointer;
+
+	}
+	.indexButton
+	{
+		height: 25px;
+		width: 100px;
+		padding: 2px 8px; 
+		margin: 2px 4px 6px 0px; 
+		
+		border:1px solid #000;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		
+		
+		-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	}
+.indexButton:hover
+	{
+	  background: black;
+	  color: white;
+	  	  	 cursor: pointer;
+
+	}  
+	.roomButton
+	{
+		height: 50px;
+		width: 200px;
+		padding: 2px 8px; 
+		margin: 2px 4px 6px 0px; 
+		background: #FFF;
+		border:1px solid #000;
+		border-radius:0px;
+		-moz-border-radius:0px;
+		-webkit-border-radius:5px;
+		
+		
+		-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		box-shadow:rgba(0,0,0,0.2) 0 2px 0 0;
+	}
+.roomButton:hover
+	{
+	  background: black;
+	  color: white;
+	  	  	 cursor: pointer;
+
+	}  	
+	.thin_button
+	{
+		
+		font-size: 0.7em;
+		
+		width: 100px;
+		padding: 0px 0px 0px 0px; 
+		margin: 2px 4px 6px 0px; 
+		border:1px solid #000;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+	}
+	.thin_button:hover
+	{
+	  background: black;
+	  color: white;
+	  cursor: pointer;
+	}
+		.button2
+	{
+		width: 100px;
+		padding: 2px 8px; 
+		
+		border:1px solid #000;
+		border-radius:5px;
+		-moz-border-radius:5px;
+		-webkit-border-radius:5px;
+		-webkit-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		-moz-box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+		box-shadow:rgba(0,0,0,0.2) 0 1px 0 0;
+	}
+	.button2:hover
+	{
+	  background: black;
+	  color: white;
+	  	 cursor: pointer;
+
+	}
+
+	
+/************************************   PO PRODUCT TABLE ************************************************************/	
+
+	.pos_product_table
+	{
+		width:100%;
+		color: rgb(0,0,0);
+		padding: 0px;
+		margin: 0px;
+		/*border-collapse:collapse;*/
+		border-top: 1px solid black; 
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+		border-bottom: 1px solid black;
+		text-align: left;
+	}
+	.pos_product_table th,td
+	{
+		
+		padding: 0px;
+		margin: 0px;
+		border-left: 0px solid black;
+		border-right: 0px solid black;
+		
+	}
+	
+	#pos_product_attribute_table input
+	{
+		border: 1px solid black;
+		
+	}
+
+
+.dynamic_contents_table
+{
+	/*width:100%;*/
+	font-family:verdana,arial,helvetica,sans-serif; 
+	padding: 0;
+	margin: 10px 0px 10px 0px;
+	border-width: 0 0 0px 0px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-style: none;
+}
+
+ .dynamic_contents_table th
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+	text-align:center;
+	font-size:10px;
+
+}
+ .dynamic_contents_thead th
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+	text-align:center;
+	font-size:10px;
+
+}
+.dynamic_contents_table .center_opt { text-align:center; vertical-align:middle; }
+.dynamic_contents_table tbody td
+{
+	 
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+
+	text-align:center;
+	vertical-align: middle;
+	padding: 0px;
+	margin: 0px;
+	
+}
+.dynamic_contents_table tfoot  th
+{
+	margin: 0;
+   padding: 0px 2px 0px 0px;
+   /*border-left:  1px solid rgb(50,50,50); 
+   //border-right:  1px solid rgb(50,50,50); 
+   //border-top:  1px solid rgb(50,50,50); 
+   //border-bottom:  1px solid rgb(50,50,50); */
+	line-height:10px;
+	text-align:right;
+	font-size:10px;
+
+}
+
+/*.contents_tfoot td*/
+.dynamic_contents_table tfoot td
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+   	text-align:right;
+	font-size:10px;
+
+}
+
+.dynamic_contents_table tfoot .emptyCell
+{
+	border-top: 0px none rgb(255,255,255); 
+	border-left:  0px none rgb(255,255,255); 
+	border-right:  0px none rgb(255,255,255); 
+	border-bottom:  0px none rgb(255,255,255);
+
+}	
+.dynamic_contents_table tfoot .footerCell
+{
+
+   
+   	text-align:right;
+	vertical-align: bottom;
+	padding: 0px;
+	margin: 0px;
+}
+.dynamic_contents_table textarea
+{
+	width: 100%;
+	height: 15px;
+	border-width: 0;
+	margin: 0;
+	font-size:8px;
+	padding: 0;
+	overflow:auto;
+}
+ .readonly
+ {
+ 	color: #999999;
+ }
+.dynamic_contents_table input
+{
+	width:100%;
+	text-align:center;
+}
+
+.dynamic_contents_table .currency
+{
+	text-align:right;
+}
+
+	
+	.dynamic_contents_table  .dynamic_contents_tbody tr:nth-child(even) {background: RGB(240,240,240);}
+	.dynamic_contents_table  .dynamic_contents_tbody tr:nth-child(odd) {background: #FFF;}
+	
+	.dynamic_contents_table  .dynamic_contents_tbody  tr:nth-child(even) input{background: RGB(240,240,240);}
+	.dynamic_contents_table  .dynamic_contents_tbody  tr:nth-child(odd) input {background: #FFF;}
+	
+	.dynamic_contents_table  .dynamic_contents_tbody  tr:nth-child(even) textarea {background: RGB(240,240,240);}
+	.dynamic_contents_table  .dynamic_contents_tbody  tr:nth-child(odd) textarea {background: #FFF;}
+
+	
+
+
+.static_contents_table
+{
+	/*width:100%;*/
+	font-family:verdana,arial,helvetica,sans-serif; 
+	padding: 0;
+	margin: 10px 0px 10px 0px;
+	border-width: 0 0 0px 0px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-style: none;
+	/*table-layout: fixed;*/
+
+}
+.static_contents_table th
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+	text-align:center;
+	font-size:10px;
+
+}
+.static_contents_thead th
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+	text-align:center;
+	font-size:10px;
+
+}
+.static_contents_table tbody td
+{
+	 
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+ 	padding: 0px 4px 0px 4px;
+	text-align:center;
+	vertical-align: middle;
+	font-size: 0.8em;
+	word-wrap: break-word;
+
+
+}
+.static_contents_table tfoot  th
+{
+	margin: 0;
+   padding: 0px 2px 0px 0px;
+   /*border-left:  1px solid rgb(50,50,50); 
+   //border-right:  1px solid rgb(50,50,50); 
+   //border-top:  1px solid rgb(50,50,50); 
+   //border-bottom:  1px solid rgb(50,50,50); */
+	line-height:10px;
+	text-align:right;
+	font-size:10px;
+
+}
+
+/*.contents_tfoot td*/
+.static_contents_table tfoot td
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	text-align:center;
+	vertical-align: middle;
+	background-color:yellow;
+	font-weight: bold;
+
+}
+
+.static_contents_table tfoot .emptyCell
+{
+	border-top: 0px none rgb(255,255,255); 
+	border-left:  0px none rgb(255,255,255); 
+	border-right:  0px none rgb(255,255,255); 
+	border-bottom:  0px none rgb(255,255,255);
+
+}	
+.static_contents_table tfoot .footerCell
+{
+
+   
+   	text-align:right;
+	vertical-align: bottom;
+	padding: 0px;
+	margin: 0px;
+}
+.static_contents_table textarea
+{
+	width: 100%;
+	height: 15px;
+	border-width: 0;
+	margin: 0;
+	font-size:8px;
+	padding: 0;
+	overflow:auto;
+}
+
+.static_contents_table input
+{
+	width:100%;
+	text-align:center;
+}
+.static_contents_table .currency
+{
+	text-align:right;
+}
+
+	
+	.static_contents_table  tbody tr:nth-child(even) {background: RGB(240,240,240);}
+	.static_contents_table  tbody tr:nth-child(odd) {background: #FFF;}
+	
+	.static_contents_table  tbody  tr:nth-child(even) input{background: RGB(240,240,240);}
+	.static_contents_table  tbody  tr:nth-child(odd) input {background: #FFF;}
+	
+	.static_contents_table  tbody  tr:nth-child(even) textarea {background: RGB(240,240,240);}
+	.static_contents_table  tbody  tr:nth-child(odd) textarea {background: #FFF;}
+  	.static_contents_table tr:hover td {background: #CCC;}
+  
+  
+  
+.mysql_js_table
+{
+	padding: 0;
+	margin: 10px 0px 10px 0px;
+	border-width: 0 0 0px 0px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-style: none;
+}
+.mysql_js_table th
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	text-align:left;
+}
+.mysql_js_table  td
+{
+	 
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+ 	padding: 0px 4px 0px 4px;
+	text-align:right;
+	vertical-align: middle;
+	font-size: 0.8em;
+	word-wrap: break-word;
+
+
+}
+ .mysql_js_table input
+{
+	width:100%;
+	text-align:center;
+}
+ .mysql_js_table  tr:hover th 
+{
+	background-color: rgb(150,150,150);
+}
+ .mysql_js_table  tr:hover input 
+{
+	background-color: rgb(150,150,150);
+}
+ .mysql_js_table  tr:hover td 
+{
+	background-color: rgb(150,150,150);
+}
+ .mysql_js_table  tr:hover select 
+{
+	background-color: rgb(150,150,150);
+} 
+  
+  	
+  	
+.loading_image
+{
+	text-align: center;
+	padding-top: 2px;
+
+}
+.loading_image img
+{
+
+	height: 60px;
+	width: 60px;
+}
+.mySQLTable_loading_image
+{
+
+
+
+}
+.mySQLTable_loading_image img
+{
+
+	height: 100px;
+	width: 100px;
+	 position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+}
+
+	
+/************************************   PRINT SETTINGS (HOPEFULLY) ***************************************************/
+
+
+@media print
+{
+	#navigation 
+	{
+		display: none;
+	}
+	#header
+	{
+		display: none;
+	}
+	body
+	{
+		margin: auto;
+		vertical-align:middle;
+	}
+	.button
+	{
+		display:none;
+	}
+	#footer  {
+		display: none;
+	}
+
+
+}
+     /*   body {
+	background: white;
+	font-size: 100%;
+	}
+		a:link, a:visited {
+	color: black;
+	text-decoration: underline;
+	} 
+
+	#wrapper, #content {
+	color: black;
+	border: 0;
+	width: auto;
+	margin: 0 0%;
+	background: transparent none;
+	}
+         thought this might be able to set the lanscape - @ page no workey
+        @page 
+        {
+            size: auto;   
+            margin: 0mm;  
+        }
+
+        body 
+        {
+            background-color:#FFFFFF; 
+            border: solid 1px black ;
+            margin: 0px;  
+       }
+		*/
+
+

@@ -1,0 +1,100 @@
+<!-- Script 3.3 - footer.html -->
+	<!-- End of the page-specific content. -->
+
+<?PHP
+$html = '</div><div id="footer">'.newline();
+$html .= '<table class="footer_table"><tr>'.newline();
+$html .= '<td align = "left">Piece Of Sale Copyright &copy; <a href="craigiannazzi.com">CraigIannazzi</a> 2012 | Designed and Hand Coded by Craig Iannazzi | Sponsored by <a href="http://www.Embrasse-Moi.com/">Embrasse-Moi</a></td>'.newline();
+// $html .= '<td><INPUT class = "button" type="button"  style = "width:50px" value="HOME" onclick="window.location =  \'' .POS_URL . '\'" /></td>';
+$html .= '<td><a class="main_a" href="'.POS_URL.'">Home</a></td>'.newline();
+	
+$html .= '<td align ="right">' . text_message_generator() . '</td>'.newline();
+$html .= '</tr></table>'.newline();
+$html .= '</div>'.newline();
+echo $html;
+function text_message_generator()
+{
+
+	$html = 'message:<input type = "text" style="border:1px solid rgb(200,200,200);width:140px;" id ="send_message_message" name="send_message_message" />' .newline();
+	$html .= createUserSendSelect('send_message_to_employee', 'all', 'all') .newline();
+	//$html .= '<a href="#" onclick="copyURLtoSend(); return(false);">url</a>:';
+	//$html .= '<input type = "text" style="border:1px solid rgb(200,200,200);width:40px;" id ="send_message_action_url" name="send_message_action_url" />' .newline();
+	$html .= '<input class = "button" style="width:100px;" type="button" name="button" value="Send Message" onclick="send_message()"/>'.newline();
+
+	$html .= '<script>
+	function copyURLtoSend()
+	{
+		//instead of the full document url I need the path from the install....
+		
+		//strip the size of pos_url off the front...
+		var from = POS_URL.length;
+		var to = document.URL.length;
+		document.getElementById(\'send_message_action_url\').value = document.URL.substring(from, to);
+		
+	}
+	function send_message()
+	{
+		to_pos_user_id = document.getElementsByName(\'send_message_to_employee\')[0].value;
+		message = encodeURI(document.getElementsByName(\'send_message_message\')[0].value);
+		var from = POS_URL.length;
+		var to = document.URL.length;
+		action_url = encodeURI(document.URL.substring(from, to));
+		//action_url = encodeURI(document.getElementsByName(\'send_message_action_url\')[0].value);
+		//alert(to_pos_user_id + \' \' + message + \' \' +action_url);
+		
+		var get_string = {\'message\':message,\'to_pos_user_id\' : to_pos_user_id,\'action_url\': action_url}; 
+			//$.ajaxSetup({async: false});
+			//alert(POS_ENGINE_URL + "/includes/php/ajax_create_message.php");
+		$.get(POS_ENGINE_URL + "/includes/php/ajax_create_message.php", get_string,
+						function(response) 
+						{
+							if(response == \'added\')
+							{
+								//document.getElementsByName(\'send_message_message\')[0].value = \'\';
+								alert("Sent");
+							}
+							else
+							{
+								//alert(response);
+							}
+						});	
+	}</script>';
+	return $html;
+}
+function createUserSendSelect($name, $user_id, $option_all)
+{
+	$users = getActiveUsersV2($user_id);
+	//The employe id will often be a not-active employee - meaing we want all active employees plus
+	//the one with $employee_id
+	$html = '<select style="border:1px solid rgb(200,200,200)" name="' . $name . '" id="' . $name . '" ';
+	$html .= '>';
+	//Add an option for not selected
+	$html .= '<option value="false">Select Employee</option>';
+	//add an option for all employees
+	if ($option_all != 'off')
+	{
+		$html .= '<option value ="all"';
+		if ($user_id == 'all')
+		{
+			$html .= ' selected="selected"';
+		}
+		$html .= '>All Employees</option>';
+	}
+	for($i = 0;$i < sizeof($users); $i++)
+	{
+		$html .= '<option value="' . $users[$i]['pos_user_id'] . '"';
+		
+		if ( ($users[$i]['pos_user_id'] == $user_id) ) 
+		{
+			$html .= ' selected="selected"';
+		}
+			
+		$html .= '>' . $users[$i]['first_name'] . ' ' . $users[$i]['last_name'] .'</option>';
+	}
+	$html .= '</select>';
+	return $html;
+}
+	
+?>
+</body>
+</html>

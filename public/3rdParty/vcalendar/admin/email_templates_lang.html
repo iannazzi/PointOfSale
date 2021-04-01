@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>{res:email_templates_lang}</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style.css">
+{JavaScriptLabel}
+</head>
+<body>
+<!-- BEGIN EditableGrid email_templates_lang -->
+<form name="{HTMLFormName}" action="{Action}" method="POST">
+  <input type="hidden" name="FormState" value="{FormState}">{FormScript}
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+            <th>{res:email_templates_lang}</th>
+            <td class="HeaderRight"><img border="0" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="3">{Error}</td> 
+          </tr>
+ 			<!-- END Error -->
+          <tr class="Caption">
+            <th>
+            <!-- BEGIN Sorter Sorter_language_id --><a href="{Sort_URL}">{res:cal_language}</a>
+            <!-- BEGIN Asc_On --><img border="0" src="../Styles/{CCS_Style}/Images/Asc.gif"><!-- END Asc_On -->
+            <!-- BEGIN Desc_On --><img border="0" src="../Styles/{CCS_Style}/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_language_id --></th>
+ 
+            <th colspan="2">{res:email_template_translation}</th>
+ 
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="3">{Error}</td> 
+          </tr>
+ 			<!-- END RowError -->
+          <tr class="Row">
+            <th rowspan="3">{languageLabel}<input type="hidden" name="{language_id_Name}" value="{language_id}"></th> 
+            <th>{res:email_template_desc}</th>
+			<td><input type="text" name="{email_template_desc_Name}" value="{email_template_desc}" maxlength="250" size="70"></td>
+		  </tr>
+          <tr class="Row">
+		    <th nowrap>{res:email_template_subject}&nbsp;*</th>
+			<td><input type="text" name="{email_template_subject_Name}" value="{email_template_subject}" maxlength="250" size="70"></td>
+		  </tr>
+          <tr class="Row">
+		    <th>{res:email_template_body} *</th>
+			<td><textarea name="{email_template_body_Name}" cols="60" rows="6">{email_template_body}</textarea></td> 
+          </tr>
+
+<tr class="Row">
+  <th colspan="3"><hr></th>
+</tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="3">{res:CCS_NoRecords}</td> 
+          </tr>
+ <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="text-align:right;" colspan="3">
+              <!-- BEGIN Button Button_Submit --><input name="{Button_Name}" type="image" border="0" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}"><!-- END Button Button_Submit --></td> 
+          </tr>
+        </table>
+<br>
+<a href="javascript:window.opener.location.reload();self.close()">{res:close_window}</a>
+ </td> 
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid email_templates_lang -->
+</body>
+</html>

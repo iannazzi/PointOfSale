@@ -1,0 +1,119 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:cal_contents}</title>
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style.css">
+<script language="JavaScript">
+function open_preview() {
+	var w_left = Math.ceil((screen.width-480)/2);
+	var PrevWin= open("", "preview", "top=10,left="+w_left+",width=480,height=480,status=no,toolbar=no,menubar=no,location=no,resizable=yes,scrollbars=yes");
+	PrevWin.focus();
+	PrevWin.document.open();
+	PrevWin.document.write("<html><head><title>{res:preview}</title></head><body>");
+
+	var str = document.contents_maint.content_value.value;
+	str = str.replace(/\n/g, "<br>");
+	PrevWin.document.write(str);
+	PrevWin.document.write('</body></html>');
+	PrevWin.document.close();  
+
+}
+
+function openWin(url) {
+	var w_left = Math.ceil((screen.width-700)/2);
+	var openWin = window.open(url,"TranslationWin","top=10,left="+w_left+",width=700,height=600,resizable=yes,toolbar=no,location=no,status=no,scrollbars=no,menubar=no"); 
+	openWin.focus();
+}
+</script>
+</head>
+<body>
+{header}
+<!-- BEGIN Grid contents -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table cellspacing="0" cellpadding="0" border="0" class="Header">
+        <tr>
+          <td class="HeaderLeft"><img border="0" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+          <th>{res:cal_contents}</th>
+          <td class="HeaderRight"><img border="0" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+        </tr>
+      </table>
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>{res:content_type}</th>
+ 
+          <th>{res:content_desc}</th>
+ 
+ 		  <th>&nbsp;</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{content_type_Src}">{content_type}</a>&nbsp;</td>
+          <td>{content_desc}&nbsp;</td> 
+		  <td><a href="javascript:openWin('{translations_Src}')"><img src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonTranslation.gif" border="0"></a></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">{res:CCS_NoRecords}</td> 
+        </tr>
+ <!-- END NoRecords -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid contents --><br>
+<!-- BEGIN Record contents_maint -->
+<form method="post" action="{Action}" name="{HTMLFormName}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table cellspacing="0" cellpadding="0" border="0" class="Header">
+          <tr>
+            <td class="HeaderLeft"><img border="0" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+            <th>{res:contents}</th>
+            <td class="HeaderRight"><img border="0" src="../Styles/{CCS_Style}/Images/Spacer.gif"></td>
+          </tr>
+        </table>
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>{res:content_type}</th>
+ 
+            <td>{content_type}&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:content_desc}&nbsp;*</th>
+ 
+            <td><input type="text" name="{content_desc_Name}" value="{content_desc}" maxlength="250" size="50">&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th valign="top">{res:content_value}</th>
+ 
+            <td><textarea name="{content_value_Name}" cols="50" rows="15">{content_value}</textarea>
+				<input type="hidden" name="{content_id_Name}" value="{content_id}"></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td colspan="2" align="right">
+			  <!-- BEGIN Button Preview --><input src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonPreview.gif" border="0" name="{Button_Name}" type="image" value="Preview" onclick="open_preview();return false;"><!-- END Button Preview -->&nbsp;
+              <!-- BEGIN Button Button_Update --><input name="{Button_Name}" type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" border="0"><!-- END Button Button_Update -->&nbsp;
+              <!-- BEGIN Button Button_Cancel --><input name="{Button_Name}" type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonCancel.gif" value="{res:CCS_Cancel}" border="0"><!-- END Button Button_Cancel --></td> 
+          </tr>
+        </table>
+ </td> 
+    </tr>
+  </table>
+</form>
+<!-- END Record contents_maint --><br>
+
+</body>
+</html>

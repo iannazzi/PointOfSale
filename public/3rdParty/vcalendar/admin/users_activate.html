@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:users_activate}</title>
+<meta content="CodeCharge Studio 3.0.1.5" name="GENERATOR">
+<link href="../Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{header} 
+<!-- BEGIN Record users -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0" width="500">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <th>{res:users_activate}</th>
+ 
+            <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>{res:user_login}</th>
+ 
+            <td>{user_login}&nbsp;<input type="hidden" name="{user_login__Name}" value="{user_login_}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:user_first_name}</th>
+ 
+            <td>{user_first_name}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:user_last_name}</th>
+ 
+            <td>{user_last_name}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:user_email}</th>
+ 
+            <td>{user_email}&nbsp;<input type="hidden" name="{user_email__Name}" value="{user_email_}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:user_date_add}</th>
+ 
+            <td>{user_date_add}&nbsp;</td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Update --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonActivate.gif" value="{res:activate}" border="0" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonDelete.gif" value="{res:CCS_Delete}" border="0" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonCancel.gif" value="{res:CCS_Cancel}" border="0" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record users --><br>
+</body>
+</html>

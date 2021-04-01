@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="aa519778-a63c-4270-ab8a-fbbe5da64647" name="Default" comment="" />
+    <ignored path="Engine.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Engine" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/includes/php/file_output.php" />
+        <option value="$PROJECT_DIR$/accounting/Accounts/list_account_activity.php" />
+        <option value="$PROJECT_DIR$/sales/POS_V1/retail_sales_invoice.ajax.php" />
+        <option value="$PROJECT_DIR$/sales/POS_V1/retail_sales_invoice.php" />
+        <option value="$PROJECT_DIR$/sales/retailInvoice/list_sales_tax_collected.php" />
+        <option value="$PROJECT_DIR$/purchase_orders/SendPurchaseOrder/email_po_update.form.handler.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="purchase_orders" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="purchase_orders" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SendPurchaseOrder" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Engine" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/purchase_orders/ReceivePurchaseOrder" />
+      <recent name="$PROJECT_DIR$/purchase_orders/CreatePurchaseOrder" />
+      <recent name="$PROJECT_DIR$/inventory/Locations" />
+      <recent name="$PROJECT_DIR$/accounting/Accounts" />
+    </key>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="aa519778-a63c-4270-ab8a-fbbe5da64647" name="Default" comment="" />
+      <created>1455203223447</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1455203223447</updated>
+      <workItem from="1468858609951" duration="425000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="425000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24921875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/sales/retailInvoice/list_sales_tax_collected.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6032">
+          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+          <folding>
+            <marker date="1458309781000" expanded="true" signature="10:440" placeholder="..." />
+            <marker date="1458309781000" expanded="true" signature="691:24792" placeholder="{...}" />
+            <marker date="1458309781000" expanded="true" signature="1066:1201" placeholder="SELECT sum(u... pos_general_journal" />
+            <marker date="1458309781000" expanded="true" signature="1734:1943" placeholder="..." />
+            <marker date="1458309781000" expanded="true" signature="2161:3725" placeholder="..." />
+            <marker date="1458309781000" expanded="true" signature="3798:11243" placeholder="SELECT min(i... pos_sales_invoice" />
+            <marker date="1458309781000" expanded="true" signature="3930:4052" placeholder="SELECT sum(e... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="4106:4302" placeholder="SELECT sum(i... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="4350:4499" placeholder="SELECT sum(t... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="4529:4735" placeholder="SELECT sum(i... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="4769:5103" placeholder="SELECT coale... pos_sales_invoice_promotions" />
+            <marker date="1458309781000" expanded="true" signature="5140:5473" placeholder="SELECT coale... pos_sales_invoice_promotions" />
+            <marker date="1458309781000" expanded="true" signature="5512:5696" placeholder="SELECT sum(i... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="5735:6293" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="6997:7553" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="7581:8132" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="8162:8714" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="8747:9306" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="9358:9916" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="9952:10507" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="10547:11043" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="11274:11302" placeholder="SELECT * FRO... sales_invoices" />
+            <marker date="1458309781000" expanded="true" signature="11727:12585" placeholder="SELECT local... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="13175:13615" placeholder="SELECT sum( pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="13755:24789" placeholder="//..." />
+            <marker date="1458309781000" expanded="true" signature="14774:15366" placeholder="SELECT sum(e... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="18674:19911" placeholder="SELECT local... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="19950:20035" placeholder="SELECT *, ta... main_tax" />
+            <marker date="1458309781000" expanded="true" signature="21627:22783" placeholder="SELECT local... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="22816:22910" placeholder="SELECT *, ex... schedule_h" />
+            <marker date="1458309781000" expanded="true" signature="24797:25592" placeholder="{...}" />
+            <marker date="1458309781000" expanded="true" signature="25335:25346" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/POS_V1/retail_sales_invoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1011" column="0" selection-start-line="1011" selection-start-column="0" selection-end-line="1011" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounting/Accounts/list_account_activity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/product_library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1299" column="42" selection-start-line="1299" selection-start-column="42" selection-end-line="1299" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/file_output.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/file_output.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/products/ProductImages/load_web_image.fh.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="271" column="24" selection-start-line="271" selection-start-column="24" selection-end-line="271" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/file_output.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/product_library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1299" column="42" selection-start-line="1299" selection-start-column="42" selection-end-line="1299" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/Info/server_info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounting/Accounts/php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/POS_V1/.user.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounting/Accounts/.user.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory/Locations/.user.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/inventory/Locations/php.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase_orders/CreatePurchaseOrder/.user.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase_orders/ReceivePurchaseOrder/.user.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/accounting/Accounts/list_account_activity.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/POS_V1/retail_sales_invoice.ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="957" column="52" selection-start-line="957" selection-start-column="52" selection-end-line="957" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_3.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="708" column="9" selection-start-line="708" selection-start-column="9" selection-end-line="708" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/javascript/javascript_library.2015.06.02.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="162" column="9" selection-start-line="162" selection-start-column="9" selection-end-line="162" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/POS_V1/retail_sales_invoice.payments.2015.10.24.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="952" column="12" selection-start-line="952" selection-start-column="12" selection-end-line="952" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/POS_V1/retail_sales_invoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="1011" column="0" selection-start-line="1011" selection-start-column="0" selection-end-line="1011" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sales/retailInvoice/list_sales_tax_collected.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+          <folding>
+            <marker date="1458309781000" expanded="true" signature="10:440" placeholder="..." />
+            <marker date="1458309781000" expanded="true" signature="691:24792" placeholder="{...}" />
+            <marker date="1458309781000" expanded="true" signature="1066:1201" placeholder="SELECT sum(u... pos_general_journal" />
+            <marker date="1458309781000" expanded="true" signature="1734:1943" placeholder="..." />
+            <marker date="1458309781000" expanded="true" signature="2161:3725" placeholder="..." />
+            <marker date="1458309781000" expanded="true" signature="3798:11243" placeholder="SELECT min(i... pos_sales_invoice" />
+            <marker date="1458309781000" expanded="true" signature="3930:4052" placeholder="SELECT sum(e... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="4106:4302" placeholder="SELECT sum(i... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="4350:4499" placeholder="SELECT sum(t... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="4529:4735" placeholder="SELECT sum(i... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="4769:5103" placeholder="SELECT coale... pos_sales_invoice_promotions" />
+            <marker date="1458309781000" expanded="true" signature="5140:5473" placeholder="SELECT coale... pos_sales_invoice_promotions" />
+            <marker date="1458309781000" expanded="true" signature="5512:5696" placeholder="SELECT sum(i... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="5735:6293" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="6997:7553" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="7581:8132" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="8162:8714" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="8747:9306" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="9358:9916" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="9952:10507" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="10547:11043" placeholder="SELECT sum(p... pos_sales_invoice_to_payment" />
+            <marker date="1458309781000" expanded="true" signature="11274:11302" placeholder="SELECT * FRO... sales_invoices" />
+            <marker date="1458309781000" expanded="true" signature="11727:12585" placeholder="SELECT local... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="13175:13615" placeholder="SELECT sum( pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="13755:24789" placeholder="//..." />
+            <marker date="1458309781000" expanded="true" signature="14774:15366" placeholder="SELECT sum(e... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="18674:19911" placeholder="SELECT local... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="19950:20035" placeholder="SELECT *, ta... main_tax" />
+            <marker date="1458309781000" expanded="true" signature="21627:22783" placeholder="SELECT local... pos_sales_invoice_contents" />
+            <marker date="1458309781000" expanded="true" signature="22816:22910" placeholder="SELECT *, ex... schedule_h" />
+            <marker date="1458309781000" expanded="true" signature="24797:25592" placeholder="{...}" />
+            <marker date="1458309781000" expanded="true" signature="25335:25346" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/email_library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1468441724000" expanded="true" signature="28:479" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="56:166" placeholder="//..." />
+            <marker date="1468441724000" expanded="true" signature="370:379" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="397:406" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="538:868" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="671:682" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="696:716" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="728:746" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="760:764" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="784:829" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="899:1273" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="926:1247" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="1050:1226" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="1102:1178" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="1378:3682" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="1426:3553" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="1562:1632" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="1600:1628" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="1692:1721" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="1893:1972" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="2131:2772" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="2204:2257" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="2275:2385" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="2394:2501" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="2581:2737" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="2856:3494" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="3096:3461" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="3187:3408" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="3417:3456" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="3560:3665" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="3761:4130" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="3855:3971" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="4160:5042" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="5075:7964" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="5094:7943" placeholder="{...}" />
+            <marker date="1468441724000" expanded="true" signature="5125:7815" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="7836:7880" placeholder="..." />
+            <marker date="1468441724000" expanded="true" signature="7896:7940" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase_orders/SendPurchaseOrder/email_po.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1532">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1453729203000" expanded="true" signature="256:420" placeholder="..." />
+            <marker date="1453729203000" expanded="true" signature="521:2322" placeholder="{...}" />
+            <marker date="1453729203000" expanded="true" signature="683:727" placeholder="..." />
+            <marker date="1453729203000" expanded="true" signature="1205:1436" placeholder="{...}" />
+            <marker date="1453729203000" expanded="true" signature="1442:1583" placeholder="{...}" />
+            <marker date="1453729203000" expanded="true" signature="2329:2436" placeholder="{...}" />
+            <marker date="1453729203000" expanded="true" signature="2504:3150" placeholder="{...}" />
+            <marker date="1453729203000" expanded="true" signature="2615:3147" placeholder="//..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/php/user_library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2704">
+          <caret line="150" column="9" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
+          <folding>
+            <marker date="1417039090000" expanded="true" signature="37:261" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="139:257" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="296:595" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="350:406" placeholder="SELECT pos_e... pos_users" />
+            <marker date="1417039090000" expanded="true" signature="478:591" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="633:751" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="645:702" placeholder="SELECT defau... pos_users" />
+            <marker date="1417039090000" expanded="true" signature="798:1272" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="960:1265" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="1153:1239" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="1248:1260" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="1311:1478" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="1518:1731" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="1770:1982" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2034:2493" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2143:2335" placeholder="..." />
+            <marker date="1417039090000" expanded="true" signature="2400:2470" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2439:2467" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2554:2910" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2595:2878" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2609:2730" placeholder="SELECT acces... pos_user_binder_access" />
+            <marker date="1417039090000" expanded="true" signature="2802:2827" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2834:2875" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2884:2908" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2952:3106" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="2964:3012" placeholder="SELECT admin... pos_users" />
+            <marker date="1417039090000" expanded="true" signature="3151:3283" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="3163:3234" placeholder="SELECT defau... pos_users" />
+            <marker date="1417039090000" expanded="true" signature="3319:3428" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="3331:3379" placeholder="SELECT email... pos_users" />
+            <marker date="1417039090000" expanded="true" signature="3459:3551" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="3471:3513" placeholder="SELECT * fro... pos_users" />
+            <marker date="1417039090000" expanded="true" signature="3590:3791" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="3647:3692" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="3698:3770" placeholder="{...}" />
+            <marker date="1417039090000" expanded="true" signature="3820:3858" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase_orders/SendPurchaseOrder/confirm_po_email.form.handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-381">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding>
+            <marker date="1373376410000" expanded="true" signature="306:2127" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="411:516" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="483:513" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="558:613" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="648:842" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="848:852" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="914:973" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="1238:1714" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="1756:1765" placeholder="{...}" />
+            <marker date="1373376410000" expanded="true" signature="2132:2239" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/purchase_orders/SendPurchaseOrder/email_po_update.form.handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

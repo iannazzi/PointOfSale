@@ -1,0 +1,20 @@
+Options -Indexes
+
+#php config
+php_value max_input_vars 3000
+
+# For the ajax version we will be routing everything through index.php
+
+#DirectoryIndex index.php
+
+# RewriteEngine on
+# RewriteCond %{HTTP_HOST} ^www\.embrasse\-moi\.com\/POS$
+# RewriteRule ^(.*)$ "http\:\/\/embrasse\-moi\.com\/POS\/$1" [R=301,L]
+
+# 	http://query7.com/php-regular-expresssion-url-router
+# RewriteRule !\.(js|ico|txt|gif|jpg|png|css)$ index.php
+
+#	http://www.kratedesign.com/blog/2010/03/php-router-and-clean-urls/
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /index.php [L,QSA]

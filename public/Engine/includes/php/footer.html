@@ -1,0 +1,35 @@
+<div id="footer">
+    <div id="footer_nav" class="footer_nav clearfix">
+        <ul>
+            {foreach from=$pages_links item="page_item"}
+            {if $page_item.bottom}
+            {*if $page_item.title neq 'Customer Service' and $page_item.title neq 'About' and
+            $page_item.title neq 'BRA FITTING'*}
+            <li><a href="{$page_item.url}">{$page_item.title|htmlspecialchars}</a></li>
+            {*/if*}
+            {/if}
+            {/foreach}
+        </ul>
+    </div>
+    <div id="footer_info">
+        <div id="footer_address"><span>1 N MAIN STREET PITTSFORD - 585.383.1170</span>
+        </div>
+        <div id="footer_hours">
+            <span>HOURS: MON - SAT 10-6</span>
+        </div>
+    </div>
+
+    <div id="footer_search">
+        <form action="{$url_http}" method="get">
+            <input type="hidden" name="p" value="catalog"/>
+            <input type="hidden" name="mode" value="search"/>
+            <input type="hidden" name="search_in" value="all"/>
+            <input maxlength="256" type="text" name="search_str" value="{$search_str|htmlspecialchars}"
+                   class="search01"/>
+            {button class="search01_btn" text="Search" file=$smarty.template}
+        </form>
+    </div>
+
+
+    {if $GoogleAnalyticsActive == 'YES' && !$isDesignMode}{$GoogleAnalytics}{/if}
+</div>

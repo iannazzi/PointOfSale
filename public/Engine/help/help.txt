@@ -1,0 +1,137 @@
+Help Doc....
+
+
+Creating and adding POS systems
+Because the System is operating on a cloud somewhere in cyberspace, it has little knowledge of where you are. We know who you are, because you logged in. You can log in from anywhere. 
+
+Now lets say you want to print something. You log into a device and 'print' an invoice. This print job now needs to go somewhere. If you have 10 stores and 10 printers in each then it becomes difficult to choose a printer. If you log into computer A which has a printer #32 sitting beside it, you would want the print job to come out of that printer.
+
+A similar problem might exist when attempting to link any device to any device. A computer to a cash drawer. A scanner to a computer. A scanner to a printer. A computer to a cash drawer. 
+
+POS systems can be any computer or devices. In order to identify what computer is being used we need to first add the computer and give it a little description. Then we need to 'register' the computer which will set a cookie in the computer. Subsequent visits from that computer will send cookie data. If the browser cache is cleared or an alternate browser is used the cookie will need to be reset, or registered. This can happen infrequently or often, it is similar re-installing software and having to link up the system.
+
+Registering the computer now allows us to set a default printer. It also tracks a user to a system. It will also track a user to system to a cash drawer.
+
+On the server print jobs will be placed as .pdf files in a store folder sub folder print folder sub folder printer name folder. ex Pittsford => Print => Brother 2240_7. On location a script is installed that monitors this server folder, pulls the print jobs off the server, stores it in a local server, and sends the job to the printer. This script can be ran on single systems, but preferably a site server.
+############################# GENERAL SETUP ###################################
+
+enter company information
+choose industry  (creates accounts)
+
+
+Point of sale 
+Invoices - print "front" of invoice.
+Create gift card account
+Set up store
+	default tax jurisdiction
+Set up users
+	adim
+
+############################# ACCOUNTS ##########################################
+
+Account types and the chart of accounts
+The chart of accounts is basically a mapping of all of the accounts.
+The actual "accounts" are subsidary accounts to the chart of accounts. 
+Its like product categories. Clothes => sweaters
+We have 1010 cash then
+		1010 - register 1
+		1010 - register 2
+		etc
+we have 2000 accounts payable then
+		2000 - 1234567 RG&E 1
+		2000 - sgknsgks RG&E 2
+		2000 - simone perele
+		2000 - meNu 
+		etc....
+however we might want to do this:
+		2000 Operating Accounts Payable
+		2010 Inventory Accounts Payable
+		
+		
+so maybe to create a sub account we need to start at the chart of accounts....
+click on where we need an account...
+		 
+example:
+user creates a customer deposit account so they can track deposits.
+user creates a customer store credit account so they can track store credits
+user creates a gift card account 
+
+
+
+############################# GENERAL JOURNAL ###################################
+############################# PAYMENTS JOURNAL ###################################
+
+
+############################# PURCHASE ORDERS ####################################
+A) Manufacturers
+B) Brands
+C) Categories
+############################# PURCHASE JOURNAL ###################################
+
+############################# INVENTORY ###################################
+A) Inventory Locations
+B) Inventory event.
+############################# PRODUCTS ####################################
+A) Product Categories.
+	1) Default Taxing
+
+CHALLENGES
+Price changes
+dealing with LIFO/FIFO pricing changes
+-product price often increase. Upon ordering price will be updated. Current stock will then ring out as new price however sticker will have old price on it. Generally this is correct. When the price increase your inventory now has more value. you should re-sticker. Alternatively create a new product with new stickers, but you will now have identical items in the store with different prices. When ordering the user has to make a decision.
+
+SETS
+	- price as a set and risk selling part for zero dollars. Price separate and risk giving part of a set away for free....
+
+clearance pricing - use inventory code. Inventory a location and then choose clearence items or set sale pricing from the location view. 
+
+############################# POINT OF SALE - SYSTEM ####################################
+A) Terminal or Client computer or device
+B) Remote Server
+D) Local Server
+C) Printer
+D) Payment Processing
+	1) Cash and cash registers accounts
+	2) Checks and check register account
+	3) Store credit 
+	4) Credit cards
+		i) Payment gateways
+		ii) hardware
+
+E) Sales tax
+	1) Taxing Jurisdictions
+
+############################# GIFT CARDS #########################################
+Charity gift cards - or assigning gift cards that were not "purchased" a value....
+Log in as an (admin or super user or what?). If you have not done so, Create a non posting account for "pending charity gift cards"... this is a fake account where fake money exchanges.  Now Create an invoice for the gift card. For payment choose 'other', and choose the pending charity contribution account. The accounting operation will be to debit pending charity gift cards and credit gift card liabilities. Once the gift card has been redeemed you can expense the cost of goods sold, credit pending charity contribution account
+/*	
+		$50 donation gift card (get receipt) to breast cancer awarness
+		
+		howeverrrrr I have only given one out.... no idea when or if it will ever return...
+		and no idea if it is a true charity or if i will get a receipt....
+		So we make a fake account to exchange fake money, however we are now liable for that card, which is real.
+												debit		credit
+		liability credit gift cards payable					$50
+		pending charity contributions			$50				
+		^ This account does not get "expensed"
+		
+		When redeemed this is what it should look like:
+																debit		credit
+		charitable contributions expense 						$29 or whatever the cogs ends up being.		
+				or promotion expense....
+		cost of goods sold (cogs - product and labor)						$29 
+
+		liability - gift cards payable							$50				
+		asset - Revenue														$0
+		pending charitable contributions									$50
+		
+		
+		maybe we do an invoice, then pay using pending account
+		give the gift card out
+		record the "sale" COGS as an expense???		
+	*/
+
+
+Giving away a gift card... or giving any value away, like $100 for $75....
+Log in as a user that is included in a group that has access to pos - other payments
+create the invoice. Select internal payment. Create a store credit account to handle fake money receieved. Use this account for payment.

@@ -1,0 +1,146 @@
+BODY {
+	COLOR: #000000; BACKGROUND-COLOR: #ffffff
+}
+A, A:link ,A:visited, A:hover, A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+
+.noprint {
+	DISPLAY: none
+}
+#ccsheader {
+	DISPLAY: none
+}
+#ccsfooter {
+	DISPLAY: none
+}
+
+#printfooter {
+	DISPLAY: block;
+	COLOR: #000000;
+
+}
+
+
+print_border { 
+   border-bottom:1px solid #000000;"
+}
+.Grid { 
+	border-right: 1px solid #000000; 
+	border-bottom: 1px solid #000000;
+}
+
+.Caption th { 
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.Caption td { 
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.GroupCaption td {
+	text-align: left; 
+	vertical-align: top;
+	font-weight: bold;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.SubTotal td {
+	text-align: left; 
+	vertical-align: top;
+	font-weight: bold;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.Total td {
+	text-align: left;
+	vertical-align: top;
+	font-weight: bold;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.Row th {
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.Row td {
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.AltRow th {
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.AltRow td {
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.Controls th {
+	text-align: left; 
+	vertical-align: top;
+	font-weight: bold;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.Controls td {
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+
+.Footer td { 
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+.Bottom td { 
+	text-align: left; vertical-align: top;
+	padding: 3px;
+	white-space: nowrap;
+	border-left: 1px solid #000000;
+	border-top: 1px solid #000000;
+}
+
+

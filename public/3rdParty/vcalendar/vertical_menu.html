@@ -1,0 +1,67 @@
+<!-- BEGIN Record VerticalMenu -->
+<table cellspacing="0" cellpadding="0" border="0" style="width:100%">
+  <tr>
+    <td>
+      <table class="Header" cellspacing="0" cellpadding="0" border="0" style="width:100%">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <th>{res:menu}</th>
+ 
+          <td class="HeaderRight"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Calendar" cellspacing="0" cellpadding="0">
+        <form name="{HTMLFormName}" action="{Action}" method="post">
+          <tr class="CalendarOtherMonthDay">
+            <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px;"><a href="{year_Src}">{res:cal_year}</a><br>
+              <a href="{month_Src}">{res:cal_month}</a><br>
+              <a href="{week_Src}">{res:cal_week}</a><br>
+              <a href="{day_Src}">{res:cal_day}</a><br>
+              <a href="{search_Src}">{res:cal_search}</a><br>
+              <!-- BEGIN Panel LoginPanel -->
+              <!-- BEGIN Link RegLink --><a href="{RegLink_Src}">{res:cal_registration}</a><br>
+              <!-- END Link RegLink --><a href="{login_Src}">{res:CCS_Login}</a><br>
+              <!-- END Panel LoginPanel -->
+              <!-- BEGIN Panel user_logout -->
+              <!-- BEGIN Link add_event --><a href="{add_event_Src}">{res:cal_add_event}</a><br>
+              <!-- END Link add_event --><a href="{profile_Src}">{res:cal_profile}</a><br>
+              <!-- BEGIN Link administration_link --><a href="{administration_link_Src}">{res:cal_administration}</a><br>
+              <!-- END Link administration_link --><a href="{logout_Src}">{res:CCS_LogoutBtn}</a> [{user_login}]<br>
+              <!-- END Panel user_logout --><br>
+            </td> 
+          </tr>
+ 
+          <tr class="CalendarWeekend">
+            <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px;">
+              <!-- BEGIN ListBox style -->
+              <select name="{style_Name}" style="margin-bottom:3px">
+                <option value="" selected>-- {res:cal_style} --</option>
+                {style_Options} 
+              </select>
+ <br>
+              <!-- END ListBox style -->
+              <!-- BEGIN ListBox locale -->
+              <select name="{locale_Name}" style="margin-bottom:3px">
+                <option value="" selected>-- {res:cal_language} --</option>
+                {locale_Options} 
+              </select>
+ <br>
+              <!-- END ListBox locale -->
+              <!-- BEGIN ListBox categories -->
+              <select name="{categories_Name}" style="margin-bottom:3px">
+                <option value="" selected>-- {res:cal_category} --</option>
+                {categories_Options} 
+              </select>
+ <br>
+              <!-- END ListBox categories -->
+              <!-- BEGIN Button Button_Apply --><input name="{Button_Name}" type="image" border="0" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonApply.gif" value="{res:cal_btn_apply}"><!-- END Button Button_Apply --></td> 
+          </tr>
+        </form>
+ 
+      </table>
+    </td> 
+  </tr>
+</table>
+<!-- END Record VerticalMenu -->

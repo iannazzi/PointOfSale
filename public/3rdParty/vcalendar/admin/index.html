@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:cal_administration}</title>
+<link href="../Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{header} 
+<!-- BEGIN Grid users -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <th>{res:non_confirmed_users}</th>
+ 
+          <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Row">
+          <td colspan="7">{res:CCS_TotalRecords}&nbsp; {users_TotalRecords}</td>
+        </tr>
+ 
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_user_id --><a href="{Sort_URL}">{res:user_id}</a> 
+          <!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_user_id --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_user_login --><a href="{Sort_URL}">{res:user_login}</a> 
+          <!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_user_login --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_user_first_name --><a href="{Sort_URL}">{res:user_first_name}</a> 
+          <!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_user_first_name --></th>
+ 
+          <th colspan="2">
+          <!-- BEGIN Sorter Sorter_user_last_name --><a href="{Sort_URL}">{res:user_last_name}</a> 
+          <!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_user_last_name --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_user_email --><a href="{Sort_URL}">{res:user_email}</a> 
+          <!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_user_email --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_user_date_add --><a href="{Sort_URL}">{res:user_date_add}</a> 
+          <!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_user_date_add --></th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td style="TEXT-ALIGN: right">{user_id}&nbsp;</td> 
+          <td><a href="{user_login_Src}">{user_login}</a>&nbsp;</td> 
+          <td>{user_first_name}&nbsp;</td> 
+          <td colspan="2">{user_last_name}&nbsp; </td> 
+          <td>{user_email}&nbsp;</td> 
+          <td>{user_date_add}&nbsp;</td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="7">{res:CCS_NoRecords}</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="7">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="../Styles/{CCS_Style}/Images/First.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="../Styles/{CCS_Style}/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="../Styles/{CCS_Style}/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="../Styles/{CCS_Style}/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp; 
+            <!-- BEGIN Pages -->
+            <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+            <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->{res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="../Styles/{CCS_Style}/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="../Styles/{CCS_Style}/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="../Styles/{CCS_Style}/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="../Styles/{CCS_Style}/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid users -->
+</body>
+</html>

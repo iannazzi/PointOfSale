@@ -1,0 +1,241 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:install}</title>
+<link href="../Styles/Pine/Style.css" type="text/css" rel="stylesheet">
+<script>
+function HideShowRootUser() {
+	if (document.sql_environment) {
+		if (document.sql_environment.create_db.checked == true) {
+			document.getElementById("root_account1").style.display = "";
+			document.getElementById("root_account2").style.display = "";
+			document.getElementById("root_account3").style.display = "";
+			document.getElementById("root_account4").style.display = "";
+			document.getElementById("change_db").style.display = "none";
+		} else {
+			document.getElementById("root_account1").style.display = "none";
+			document.getElementById("root_account2").style.display = "none";
+			document.getElementById("root_account3").style.display = "none";
+			document.getElementById("root_account4").style.display = "none";
+			document.getElementById("change_db").style.display = "";
+		}
+	}
+}
+
+window.onload = function() {
+	HideShowRootUser();
+}
+</script>
+</head>
+<body>
+<center>
+<!-- BEGIN Panel Panel1 --><br>
+<table cellspacing="0" cellpadding="0" width="600" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="../Styles/Pine/Images/Spacer.gif" border="0"></td> 
+          <th>{res:welcom_install}</th>
+ 
+          <td class="HeaderRight"><img src="../Styles/Pine/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>VCalendar</th>
+        </tr>
+ 
+        <tr class="Row">
+          <td>{res:install_introduce}<br>
+            <br>
+            <table width="100%" border="0">
+              <tr>
+                <th style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"><b>{res:system_requirements}</b></th>
+                <th style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"><b>{res:status}</b></th>
+              </tr>
+ 
+              <tr>
+                <td style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px">{res:php_version}</td> 
+                <td style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"><font color="green"><b>OK</b></font></td>
+              </tr>
+ 
+              <tr>
+                <td style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px">{res:MySQL_support}</td> 
+                <td style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"><b>{MySQLCheck}</b></td>
+              </tr>
+ 
+              <tr>
+                <td style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px">{res:writable_common}</td> 
+                <td style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"><b>{WriteCheck}{CommonDesc}</b></td>
+              </tr>
+
+			  <tr>
+				<td style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px">{res:writable_folder}</td> 
+				<td style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px"><b>{FolderCheck}</b></td> 
+			  </tr>
+            </table>
+            <br>
+            <br>
+            <br>
+            <br>
+          </td>
+        </tr>
+
+        <tr class="Row">
+          <td align="right">
+
+<!-- BEGIN Link CheckLink --><a href="{CheckLink_Src}">{CheckLink}</a>&nbsp;<!-- END Link CheckLink -->
+		  <a href="{InstallLink_Src}">{InstallLink}</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Panel Panel1 -->
+<!-- BEGIN Panel Panel2 -->
+<!-- BEGIN Record sql_environment --><br>
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" width="500" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="../Styles/Pine/Images/Spacer.gif" border="0"></td> 
+            <th>{res:install_step2}</th>
+ 
+            <td class="HeaderRight"><img src="../Styles/Pine/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <tr class="Controls">
+            <td colspan="2">{res:install_introduce2}<br>
+              <br>
+              <br>
+            </td>
+          </tr>
+ 
+          <tr class="Footer">
+            <td colspan="2"><b>{res:sql_environment}</b></td>
+          </tr>
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>{res:sql_host} *</th>
+            <td><input value="{sql_host}" name="{sql_host_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:sql_database_name} *</th>
+            <td nowrap><input value="{sql_db_name}" name="{sql_db_name_Name}"><input type="checkbox" name="{create_db_Name}" value="1" onclick="HideShowRootUser();" {create_db}>{res:create_db}</td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:sql_username} *</th>
+            <td><input value="{sql_username}" name="{sql_username_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:sql_password}</th>
+            <td><input type="password" value="{sql_password}" name="{sql_password_Name}"></td>
+          </tr>
+
+		  <tr class="Controls" id="change_db">
+			<td colspan="2"><!-- BEGIN RadioButton change_db --><input {Check} type="radio" name="{change_db_Name}" value="{Value}"><b>{Description}</b><br><!-- END RadioButton change_db --></td>
+		  </tr>
+
+          <tr class="Footer" id="root_account1" style="display:none">
+            <td colspan="2"><b>{res:db_admin_account}</b></td>
+          </tr>
+ 
+          <tr class="Controls" id="root_account4" style="display:none">
+            <td colspan="2">{res:db_admin_account_desc}</td>
+          </tr>
+          <tr class="Controls" id="root_account2" style="display:none">
+            <th>{res:db_admin_name} *</th>
+            <td><input value="{root_username}" name="{root_username_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls" id="root_account3" style="display:none">
+            <th>{res:db_admin_password}</th>
+            <td><input type="password" value="{root_password}" name="{root_password_Name}"></td>
+          </tr>
+ 
+          <tr class="Footer">
+            <td colspan="2"><b>{res:your_admin_account}</b></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:CCS_Login} *</th>
+ 
+            <td><input value="{user_login}" name="{user_login_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:CCS_Password} *</th>
+ 
+            <td><input type="password" value="{user_password}" name="{user_password_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:user_confirm_password} *</th>
+ 
+            <td><input type="password" value="{user_password_rep}" name="{user_password_rep_Name}"></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="image" src="../Styles/Pine/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Insert}" border="0" name="{Button_Name}"><!-- END Button Button_Insert --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record sql_environment --><!-- END Panel Panel2 -->
+<!-- BEGIN Panel Panel3 --><br>
+<table cellspacing="0" cellpadding="0" width="500" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="../Styles/Pine/Images/Spacer.gif" border="0"></td> 
+          <th>{res:install_finish}</th>
+ 
+          <td class="HeaderRight"><img src="../Styles/Pine/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Record" cellspacing="0" cellpadding="0">
+        <tr class="Controls">
+          <td colspan="2">{res:install_finish2}</td>
+        </tr>
+ 
+        <tr class="Row">
+          <td align="center" colspan="2">{res:install_finish_desc}<br>
+            <br>
+
+<!-- BEGIN TextArea ConfigArea -->{res:install_copy_config_php}
+<textarea style="BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; WIDTH: 536px; BORDER-BOTTOM: 0px" name="{ConfigArea_Name}" rows="15" cols="50">{ConfigArea}</textarea><!-- END TextArea ConfigArea -->
+            <br>
+            <br>
+            <br>
+          </td>
+        </tr>
+ 
+        <tr class="Row">
+          <td align="right"><a href="{Link2_Src}">{res:start}</a></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Panel Panel3 -->
+</center>
+</body>
+</html>

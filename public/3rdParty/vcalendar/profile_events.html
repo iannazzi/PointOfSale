@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:cal_my_events}</title>
+<link href="Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-CD196667
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-A2D4022D
+
+var events_groupsSearch_DatePicker_s_date_from = new Object(); 
+events_groupsSearch_DatePicker_s_date_from.format           = "ShortDate";
+events_groupsSearch_DatePicker_s_date_from.style            = "Styles/{CCS_Style}/Style.css";
+events_groupsSearch_DatePicker_s_date_from.relativePathPart = "";
+events_groupsSearch_DatePicker_s_date_from.themeVersion     = "3.0";
+
+var events_groupsSearch_DatePicker_s_date_to = new Object(); 
+events_groupsSearch_DatePicker_s_date_to.format           = "ShortDate";
+events_groupsSearch_DatePicker_s_date_to.style            = "Styles/{CCS_Style}/Style.css";
+events_groupsSearch_DatePicker_s_date_to.relativePathPart = "";
+events_groupsSearch_DatePicker_s_date_to.themeVersion     = "3.0";
+
+//End Date Picker Object Definitions
+
+//End CCS script
+function openWin(url) {
+        var w_left = Math.ceil(screen.width/2-300);
+        var openWin = window.open(url,"VoteWin","left="+w_left+",top=30,scrollbars=no,menubar=no,height=450,width=600,resizable=yes,toolbar=no,location=no,status=no"); 
+        openWin.focus();
+}
+</script>
+</head>
+<body>
+{header} 
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">{profile_menu}</td> 
+    <td valign="top">
+      <!-- BEGIN Record events_groupsSearch -->
+      <form name="{HTMLFormName}" action="{Action}">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                  <th>{res:CCS_SearchFormPrefix}
+                  {res:events_search} {res:CCS_SearchFormSuffix}</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+                </tr>
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td>
+                </tr>
+                <!-- END Error -->
+                <tr class="Controls">
+                  <th>{res:event_title}</th>
+ 
+                  <td><input maxlength="100" size="50" value="{s_keyword}" name="{s_keyword_Name}"></td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>{res:cal_category}</th>
+ 
+                  <td>
+                    <select name="{s_category_Name}">
+                      <option value="" selected>{res:cal_all_categories}</option>
+                      {s_category_Options}
+                    </select>
+ </td>
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>{res:event_date}</th>
+ 
+                  <td>{res:from} <input size="8" value="{s_date_from}" name="{s_date_from_Name}">
+                    <!-- BEGIN DatePicker DatePicker_s_date_from --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');"><img src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_s_date_from -->&nbsp;&nbsp;&nbsp;
+                    {res:to} <input size="8" value="{s_date_to}" name="{s_date_to_Name}">
+                    <!-- BEGIN DatePicker DatePicker_s_date_to --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');"><img src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_s_date_to --></td>
+                </tr>
+ 
+                <tr class="Bottom">
+                  <td align="right" colspan="2">
+                    <!-- BEGIN Button Button_DoSearch --><input type="image" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonSearch.gif" value="{res:CCS_Search}" border="0" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </form>
+      <!-- END Record events_groupsSearch --><br>
+      <!-- BEGIN Grid events_groups -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td valign="top">
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                <th>{res:cal_my_events}</th>
+ 
+                <td class="HeaderRight"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr class="Row">
+                <td colspan="6">{res:CCS_TotalRecords}&nbsp;
+                  {events_groups_TotalRecords}</td>
+              </tr>
+ 
+              <tr class="Caption">
+                <th>&nbsp;</th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_event_date --><a href="{Sort_URL}">{res:event_date}</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_event_date --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_event_time --><a href="{Sort_URL}">{res:time}</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_event_time --></th>
+ 
+                <th>
+                <!-- BEGIN Sorter Sorter_event_title --><a href="{Sort_URL}">{res:event_title}</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_event_title --></th>
+ 
+                <th colspan="2">
+                <!-- BEGIN Sorter Sorter_category --><a href="{Sort_URL}">{res:cal_category}</a> 
+                <!-- BEGIN Asc_On --><img src="Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+                <!-- BEGIN Desc_On --><img src="Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_category --></th>
+              </tr>
+ 
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <td><a href="{EditLink_Src}">{res:cal_edit_event}</a>&nbsp;</td> 
+                <td>{event_date}&nbsp;</td> 
+                <td>{event_time}&nbsp;
+                  <!-- BEGIN Label event_time_end -->-&nbsp;{event_time_end}<!-- END Label event_time_end --></td> 
+                <td><a href="{event_title_Src}">{event_title}</a>&nbsp;</td> 
+                <td colspan="2">{category_name}&nbsp;</td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN Separator -->
+              <tr class="Separator">
+                <td colspan="6"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+              </tr>
+              <!-- END Separator -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="6">{res:CCS_NoRecords}</td>
+              </tr>
+              <!-- END NoRecords -->
+              <!-- BEGIN Navigator Navigator -->
+              <tr class="Footer">
+                <td colspan="6">
+                  <!-- BEGIN First_On --><a href="{First_URL}"><img src="Styles/{CCS_Style}/Images/First.gif" border="0"></a> <!-- END First_On -->
+                  <!-- BEGIN First_Off --><img src="Styles/{CCS_Style}/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+                  <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="Styles/{CCS_Style}/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+                  <!-- BEGIN Prev_Off --><img src="Styles/{CCS_Style}/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number}
+                  {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+                  <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="Styles/{CCS_Style}/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+                  <!-- BEGIN Next_Off --><img src="Styles/{CCS_Style}/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+                  <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="Styles/{CCS_Style}/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+                  <!-- BEGIN Last_Off --><img src="Styles/{CCS_Style}/Images/LastOff.gif" border="0"><!-- END Last_Off --></td>
+              </tr>
+              <!-- END Navigator Navigator -->
+            </table>
+          </td>
+        </tr>
+      </table>
+      &nbsp;<!-- END Grid events_groups --><br>
+    </td>
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

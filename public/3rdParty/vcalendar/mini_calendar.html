@@ -1,0 +1,97 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title></title>
+<link href="Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript">
+
+
+//get mouse coordinates
+function chk_l(e) 
+{
+	mousex=e.clientX;
+	mousey=e.clientY;
+}
+
+//get absolute object coordinates
+function getCoordinates(obj) { 
+	var x = 0;
+	var y = 0;
+	while(obj) {
+		x += obj.offsetLeft;
+		y += obj.offsetTop;	
+		obj = obj.offsetParent;
+	}
+	return new Array(x, y);
+}
+
+//return object for specified name and parent window
+function getObj(name, win) { 
+	if (document.all) return win.document.all[name];
+	else if (document.getElementById) return win.document.getElementById(name);
+	else return null;
+}
+
+
+//determine Old Brower (which do not support DIV over IFRAME)
+var isOldBrowser = false;
+var versionIndex = navigator.userAgent.indexOf('Opera');
+if (versionIndex != -1) if (parseFloat(navigator.userAgent.substr(versionIndex + 6)) < 9.0) isOldBrowser = true;
+versionIndex = navigator.userAgent.indexOf('MSIE');
+if (versionIndex != -1) if (parseFloat(navigator.userAgent.substr(versionIndex + 5)) < 5.5) isOldBrowser = true;
+versionIndex = navigator.userAgent.indexOf('Firefox');
+if (versionIndex != -1) if (parseFloat(navigator.userAgent.substr(versionIndex + 8)) < 1.0) isOldBrowser = true;
+
+//determine if calendar is in frame
+var isFrame = (top != window);
+
+//global variables
+var tooltip; //div with data from html
+var element; //for new div object creation
+var mousex = 0;
+var mousey = 0;
+
+function show(divID) {
+  tooltip = getObj('div'+divID, window); //get div object
+  
+  if (!isFrame || isOldBrowser) { //calendar is not in frame or browser can not show DIV over IFRAME
+	tooltip.style.visibility = "visible";
+	if (isOldBrowser && isFrame) {	tooltip.style.left = "0px"; tooltip.style.top = "0px"; }
+	return;
+  }
+
+  if (window.parent.document.body.lastChild == element) return; //when onmouseout appears earlier then onmouseover
+  
+  var coords = getCoordinates(getObj('vcalendar_frame', window.parent)); //get frame coordinates (in window)
+
+  element = window.parent.document.createElement('DIV'); //create new DIV element
+  element.innerHTML = tooltip.innerHTML; //copy DIV text
+  //element.setAttribute("style", tooltip.getAttribute("style")); //copy DIV style
+  element.style.cssText = tooltip.style.cssText; //copy DIV style
+  element.style.left = mousex + coords[0] + 20 + "px"; //set DIV x coordinate
+  element.style.top = mousey + coords[1] + 20 + "px"; //set DIV y coordinate
+
+  window.parent.document.body.appendChild(element); //register new DIV in parent window
+  
+  element.style.visibility = "visible";
+}
+
+function hide(divID) {
+	if (!isFrame || isOldBrowser) { //calendar is not in frame or browser can not show DIV over IFRAME
+		tooltip = getObj('div'+divID, window); //get div object	
+		tooltip.style.visibility = "hidden";
+		return;
+	}
+ 
+	//element.style.visibility = "hidden";
+	if (window.parent.document.body.lastChild != element) return; //when onmouseout appears earlier then onmouseover
+	window.parent.document.body.removeChild(element);
+}
+
+</script>
+</head>
+<body onmousemove="chk_l(event)">
+{infopanel}
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<html>
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:cal_categories}</title>
+<link href="../Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+function openWin(url) {
+        var openWin = window.open(url,"TranslationWin","top=30,height=300,width=600,resizable=yes,toolbar=no,location=no,status=no,scrollbars=no,menubar=no"); 
+}
+</script>
+</head>
+<body>
+{header} 
+<!-- BEGIN Grid categories -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <th>{res:cal_categories}</th>
+          <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+        </tr>
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+          <th>
+          <!-- BEGIN Sorter Sorter_category_name --><a href="{Sort_URL}">{res:cal_category_name}</a> 
+          <!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_category_name --></th>
+ 
+          <th>
+          <!-- BEGIN Sorter Sorter_category_image --><a href="{Sort_URL}">{res:cal_category_image}</a> 
+          <!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+          <!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_category_image --></th>
+ 
+          <th>&nbsp;</th>
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+          <td><a href="{category_name_Src}">{category_name}</a>&nbsp;</td> 
+          <td>
+            <!-- BEGIN Image category_image --><img src="../images/categories/{category_image}"><!-- END Image category_image -->&nbsp;</td> 
+          <td><a href="javascript:openWin('{translations_Src}')"><img src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonTranslation.gif" border="0" align="absMiddle"></a></td>
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="3">{res:CCS_NoRecords}</td>
+        </tr>
+        <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="3"><a href="{categories_Insert_Src}">{res:CCS_InsertLink}</a>&nbsp; 
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="../Styles/{CCS_Style}/Images/First.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="../Styles/{CCS_Style}/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="../Styles/{CCS_Style}/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="../Styles/{CCS_Style}/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number}
+            {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="../Styles/{CCS_Style}/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="../Styles/{CCS_Style}/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="../Styles/{CCS_Style}/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="../Styles/{CCS_Style}/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator --></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- END Grid categories --><br>
+<!-- BEGIN Record categories_maint -->
+<form name="{HTMLFormName}" action="{Action}" method="post" enctype="{HTMLFormEnctype}">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <th>{res:CCS_RecordFormPrefix} {res:cal_category}
+            {res:CCS_RecordFormSuffix}</th>
+ 
+            <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Controls">
+            <th>{res:cal_category_name}&nbsp;*</th>
+ 
+            <td><input maxlength="50" size="50" value="{category_name}" name="{category_name_Name}"></td>
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:cal_category_image}</th>
+ 
+            <td>
+              <!-- BEGIN FileUpload category_image --><input type="hidden" value="{State}" name="{ControlName}">
+              <!-- BEGIN Info -->&nbsp;{FileName}&nbsp;{FileSize}&nbsp;{res:CCS_Bytes}.<!-- END Info -->
+              <!-- BEGIN Upload --><input type="file" name="{FileControl}"><!-- END Upload -->
+              <!-- BEGIN DeleteControl -->{res:CCS_Delete} <input type="checkbox" name="{DeleteControl}" {DeleteChecked}><!-- END DeleteControl --><!-- END FileUpload category_image --></td>
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+              <!-- BEGIN Button Button_Insert --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonInsert.gif" value="{res:CCS_Insert}" border="0" name="{Button_Name}"><!-- END Button Button_Insert -->
+              <!-- BEGIN Button Button_Update --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" border="0" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Delete --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonDelete.gif" value="{res:CCS_Delete}" border="0" name="{Button_Name}"><!-- END Button Button_Delete -->
+              <!-- BEGIN Button Button_Cancel --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonCancel.gif" value="{res:CCS_Cancel}" border="0" name="{Button_Name}"><!-- END Button Button_Cancel --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END Record categories_maint -->
+</body>
+</html>

@@ -1,0 +1,127 @@
+
+<!DOCTYPE html >
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title><?php if(isset($page_title)){
+					 echo $page_title;}
+					 else
+					 {
+					 	echo 'XXXXXXXX';
+					 } ?></title>
+	<?php 
+	//$pos_url = POS_ENGINE_URL;
+	require_once (PHP_LIBRARY);
+	echo '<link rel="stylesheet" href="' . STYLE_SHEET . '" type="text/css" media="all" />';
+	//echo '<script>setTimeout( \'ShowTimeoutWarning();\', 900000 );</script>';
+	//Drop some variables out:
+	echo '<script>var POS_URL =\'' . POS_URL . '\';</script>';	
+	echo '<script>var LOGOUT_URL =\'' . LOGOUT_URL . '\';</script>';
+	$disable_check_login =  (isset($disable_check_login)) ? $disable_check_login : false;
+	echo includeJavascriptLibrary($disable_check_login);	
+	?>
+	
+	
+</head>
+<?php 
+
+
+if (LIVE) 
+{
+	echo '<body >';
+}
+else
+{
+	echo '<body style="background-color:rgb(255,255,125);">';
+}
+
+//echo '<noscript><input type="hidden" name="redirect" value="'.JAVASCRIPT_ERROR_PAGE.'"></noscript>';
+if (LIVE) 
+{
+	echo '<div id="header" class="header">';
+}
+else
+{
+	echo '<div id="header" class =>';
+}
+echo '<table id="header_table"><tr>';
+		echo '<td align = "left">';
+		
+		if(strtoupper($_SESSION['room']) != 'HOME')
+		{
+			echo '<a  class="main_a" href="' . POS_URL . '/index.php" >Home - </a>';
+			if (isset($binder_name))
+			{
+				if(getRoomFromBinder($binder_name))
+				{
+				echo '<a class="main_a" href="' . POS_URL . '/index.php?r='.getRoomFromBinder($binder_name) .'">' . getRoomFromBinder($binder_name) .' - </a>';
+				}
+				echo '<a  class="main_a" href="' . getBinderURL($binder_name) . '">' . $binder_name . '</a>';
+			}
+			else
+			{
+				echo '<a class="main_a" href="' . POS_URL . '/index.php?r	='.$_SESSION['room'] .'">' . $_SESSION['room'] .'</a>';
+			}
+		}
+		else
+		{
+			echo '<a class="main_a" href="' . POS_URL . '/index.php" >Home</a>';
+		}
+		echo '</td>';
+		echo '<td align = "center">';
+		echo text_message();
+		echo '</td>';
+		
+		echo '<td align = "center" >';
+		if (isset($_SESSION['first_name'])) 
+		{
+			echo '<a class="main_a" href="' . POS_ENGINE_URL . '/users/UserAccountSettings/user_settings.php?type=View" >' .$_SESSION['first_name']. ' ' . $_SESSION['last_name'] .'</a>';
+		}
+
+		echo ' - ';
+			
+		// Create a login/logout link:
+		if ( (isset($_SESSION['pos_user_id'])) && (!strpos($_SERVER['PHP_SELF'], 'logout.php')) ) 
+		{
+			echo '<a class="main_a" href="' . POS_ENGINE_URL . '/login/logout.php">Logout</a>';
+		} else 
+		{
+			echo '<a class="main_a" href="' . POS_ENGINE_URL . '/login/login.php">Login</a>';
+		}  
+		echo '</td>';
+		echo '<td style="width:400px" align = "right" ><a class="main_a" href="' . POS_URL .'" target="_blank">'.getSetting('company_logo') .' POS System </a></td>';
+		echo '</tr></table></div>';
+
+
+function text_message()
+{
+	$sql = "SELECT pos_message_id, message, action_url, concat(first_name, ' ', last_name) as full_name, from_pos_user_id, message_creation_date 
+			FROM pos_messages 
+			LEFT JOIN pos_users ON pos_users.pos_user_id = pos_messages.from_pos_user_id
+			WHERE to_pos_user_id = 				' ".$_SESSION['pos_user_id']."' 
+			AND response != 'complete' ORDER BY message_creation_date DESC";
+	$messages = getSQL($sql);
+	if (sizeof($messages)>0)
+	{
+		return '<a class="a_message" target="_blank" id="display_message" onclick ="deleteMessage('.$messages[0]['pos_message_id'].');" class = "error" href="'.POS_URL.$messages[0]['action_url'].'">'.$messages[0]['full_name'].': '.$messages[0]['message'].'</a>';
+		 
+	}
+	else 
+	{
+		return '';
+	}
+
+}
+
+if($disable_check_login)
+{
+	echo '<div id="content" >';
+}
+else
+{
+	echo '<div id="content" onmousemove ="UserInput()" onclick="UserInput()" onkeypress="UserInput()" onscroll="UserInput()">';
+}
+?>
+	
+

@@ -1,0 +1,73 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:permissions}</title>
+<link href="../Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{header} 
+<!-- BEGIN EditableGrid permissions -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <th>{res:permissions}</th>
+            <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th>{res:permission_desc}</th>
+            <th>{res:permission_value}</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <!-- BEGIN Label permission_category -->
+          <tr class="AltRow">
+            <td colspan="2"><b>{permission_category}</b></td>
+          </tr>
+          <!-- END Label permission_category -->
+          <tr class="Row">
+            <td>{permission_desc}</td> 
+            <td>
+              <!-- BEGIN ListBox perms_value -->
+			  <select name="{perms_value_Name}">
+                {perms_value_Options}
+              </select>
+              <!-- END ListBox perms_value -->
+ 			<input type="hidden" value="{perm_type}" name="{perm_type_Name}">
+			</td>
+          </tr>
+ 		  <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="2">{res:CCS_NoRecords}</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Submit --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" border="0" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid permissions -->
+</body>
+</html>

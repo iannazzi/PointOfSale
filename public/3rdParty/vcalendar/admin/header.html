@@ -1,0 +1,28 @@
+<h1>VCalendar:Administration</h1>
+<!-- BEGIN Record HMenu -->
+<table class="Calendar" cellspacing="0" cellpadding="0">
+  <form name="{HTMLFormName}" action="{Action}" method="post">
+    <tr class="CalendarOtherMonthDay">
+      <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px;" nowrap><a href="{home_Src}">{res:home_page}</a> &middot; <a href="{users_Src}">{res:cal_users}</a> &middot; <a href="{categories_Src}">{res:cal_categories}</a> &middot; <a href="{config_Src}">{res:config}</a> &middot; <a href="{messages_Src}">{res:cal_contents}</a> &middot; <a href="{permissions_Src}">{res:cal_permissions}</a> &middot; <a href="{email_templates_Src}">{res:email_templates}</a> &middot; <a href="{custom_fields_Src}">{res:custom_fields}</a> &middot; <a href="{logout_Src}">{res:CCS_LogoutBtn}</a> [{user_login}]
+        &nbsp;&nbsp; </td> 
+      <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px;" nowrap>
+        <!-- BEGIN ListBox style -->
+        <select name="{style_Name}">
+          <option value="" selected>-- {res:cal_style} --</option>
+ {style_Options} 
+        </select>
+        <!-- END ListBox style -->
+        <!-- BEGIN ListBox locale -->
+        <select name="{locale_Name}">
+          <option value="" selected>-- {res:cal_language} --</option>
+ {locale_Options} 
+        </select>
+        <!-- END ListBox locale --></td> 
+      <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px;" nowrap>
+        <!-- BEGIN Button Button_Apply --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonApply.gif" value="{res:cal_btn_apply}" border="0" name="{Button_Name}"><!-- END Button Button_Apply --></td> 
+      <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px; width:100%">&nbsp;</td> 
+    </tr>
+ 
+  </form>
+</table>
+<!-- END Record HMenu --><br>

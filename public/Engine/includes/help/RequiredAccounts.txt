@@ -1,0 +1,9 @@
+Explanation of 'Required Accounts'
+
+The code needs to post accounting events to general ledger referencing the appropriate chart of accounts. The minimum required accounts are:
+
+Cash Account					This is the last payment stop - resolving payments to cash
+Accounts Payable				These are accounts that you owe money to, on account
+Pending Accounts Payable		This account registers goods or services you know you received but have not yet received an invoice for. Once the Invoice is received it moves to Accounts Payable
+Merchandise Inventory			This is your account for products for sale
+Pending Merchandise Inventory 	This is merchandise that you have been invoiced but have not received. you expect it.

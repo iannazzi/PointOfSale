@@ -1,0 +1,80 @@
+<script language="JavaScript" type="text/javascript">
+<!-- BEGIN Panel InfoJavaScriptPanel -->
+function show(divID) {
+	document.getElementById('div'+divID).style.visibility = "visible"; 
+} 
+function hide(divID) { 
+	document.getElementById('div'+divID).style.visibility = "hidden";
+}
+<!-- END Panel InfoJavaScriptPanel -->
+</script>
+<!-- BEGIN Calendar InfoCalendar -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td>
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <th>{MonthDate}</th>
+ 
+          <td class="HeaderRight"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Calendar" cellspacing="3" cellpadding="0">
+        <tr valign="top">
+          <!-- BEGIN Month -->
+          <td>
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <tr>
+                <!-- BEGIN WeekDays -->
+                <td width="14.29%" {Style}>{DayOfWeek}</td><!-- END WeekDays -->
+                <!-- BEGIN Panel GoWeekHeader -->
+                <td class="CalendarWeekdayName">&nbsp;</td><!-- END Panel GoWeekHeader -->
+                <!-- BEGIN Week -->
+              </tr>
+ 
+              <tr>
+                <!-- BEGIN Day -->
+                <td valign="top" {Style}><a href="{DayNumber_Src}" {LinkStyle}>{DayNumber}</a> {div_begin} 
+                  <!-- BEGIN EventRow -->
+                  <div class="CalendarEvent" nowrap>
+                    <nobr><b>
+                    <!-- BEGIN Image category_image --><img src="images/categories/{category_image}" hspace="3" vspace="3"><!-- END Image category_image -->
+                    <!-- BEGIN Label EventTime -->{EventTime} - <!-- END Label EventTime -->{EventTimeEnd}
+                    {EventDescription}</b></nobr> 
+                  </div>
+ <!-- END EventRow -->{div_end}</td><!-- END Day -->
+                <!-- BEGIN EmptyDay -->
+                <td class="CalendarOtherMonthDay">&nbsp;</td><!-- END EmptyDay -->
+                <!-- BEGIN Link GoWeek -->
+                <td class="CalendarWeekend"><a href="{GoWeek_Src}"><img border="0" src="images/week.gif" title="{res:cal_week}"></a></td><!-- END Link GoWeek -->
+              </tr>
+              <!-- END Week -->
+            </table>
+          </td><!-- END Month -->
+          <!-- BEGIN MonthsRowSeparator -->
+        </tr>
+ 
+        <tr valign="top">
+          <!-- END MonthsRowSeparator -->
+        </tr>
+        <!-- BEGIN Panel InfoNavigator -->
+        <tr>
+          <td colspan="{MonthsInRow}" class="CalendarNavigator">
+            <table width="100%">
+              <tr>
+                <td width="50%" align="left"><a href="{PrevMonth_Src}"><img border="0" src="Styles/{CCS_Style}/Images/Prev.gif"></a></td>
+                <td width="50%" align="right"><a href="{NextMonth_Src}"><img border="0" src="Styles/{CCS_Style}/Images/Next.gif"></a></td> 
+              </tr>
+            </table>
+ </td>
+        </tr>
+        <!-- END Panel InfoNavigator -->
+      </table>
+ </td> 
+  </tr>
+</table>
+<br>
+<!-- END Calendar InfoCalendar -->{vertical_menu}

@@ -1,0 +1,64 @@
+<html>
+<head><meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:categories_translations}</title>
+<link href="../Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+{JavaScriptLabel}
+</head>
+<body>
+<!-- BEGIN EditableGrid categories_langs -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <th>{res:categories_translations}</th>
+ 
+            <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th>{res:cal_language}</th>
+ 
+            <th>{res:category_translation}&nbsp;*</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+          <tr class="Row">
+            <td>{languageLabel}<input type="hidden" value="{language_id}" name="{language_id_Name}"></td> 
+            <td><input maxlength="50" size="50" value="{category_name}" name="{category_name_Name}"></td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="2">{res:CCS_NoRecords}</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="2">
+              <!-- BEGIN Button Button_Submit --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" border="0" name="{Button_Name}"><!-- END Button Button_Submit --></td>
+          </tr>
+        </table>
+        <br>
+        <br>
+        <a href="javascript:self.close()">{res:close_window}</a> </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid categories_langs -->
+</body>
+</html>

@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>{res:email_templates}</title>
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style.css">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script language="JavaScript">
+function openWin(url) {
+	var w_left = Math.ceil((screen.width -700)/2);
+	var openWin = window.open(url,"TranslationWin","top=10,left="+w_left+",height=550,width=700,resizable=yes,toolbar=no,location=no,status=no,scrollbars=no,menubar=no"); 
+}
+</script>
+</head>
+<body>
+{header}
+<!-- BEGIN Grid email_templates -->
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <table class="Header" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          <th>{res:email_templates}</th>
+ 
+          <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+        </tr>
+ 
+      </table>
+ 
+      <table class="Grid" cellspacing="0" cellpadding="0">
+        <tr class="Caption">
+			<th>
+			<!-- BEGIN Sorter Sorter_email_template_id --><a href="{Sort_URL}">{res:email_template_id}</a> 
+			<!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+			<!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_email_template_id --></th>
+
+			<th>
+			<!-- BEGIN Sorter Sorter_email_template_subject --><a href="{Sort_URL}">{res:email_template_subject}</a> 
+			<!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+			<!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_email_template_subject --></th>
+
+			<th>
+			<!-- BEGIN Sorter Sorter_email_template_type --><a href="{Sort_URL}">{res:email_template_type}</a> 
+			<!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+			<!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_email_template_type --></th>
+
+			<th>
+			<!-- BEGIN Sorter Sorter_email_template_desc --><a href="{Sort_URL}">{res:email_template_desc}</a> 
+			<!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+			<!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_email_template_desc --></th>
+
+			<th>
+			<!-- BEGIN Sorter Sorter_email_template_from --><a href="{Sort_URL}">{res:email_template_from}</a> 
+			<!-- BEGIN Asc_On --><img src="../Styles/{CCS_Style}/Images/Asc.gif" border="0"><!-- END Asc_On -->
+			<!-- BEGIN Desc_On --><img src="../Styles/{CCS_Style}/Images/Desc.gif" border="0"><!-- END Desc_On --><!-- END Sorter Sorter_email_template_from --></th>
+
+			<th>&nbsp;</th>
+
+        </tr>
+ 
+        <!-- BEGIN Row -->
+        <tr class="Row">
+		  <td style="TEXT-ALIGN: right">{email_template_id}&nbsp;</td>	
+		  <td><a href="{email_template_subject_Src}">{email_template_subject}</a>&nbsp;</td>	         
+		  <td>{email_template_type}&nbsp;</td>   
+		  <td>{email_template_desc}&nbsp;</td>          
+		  <td>{email_template_from}&nbsp;</td>          
+		  <td><a href="javascript:openWin('{translations_Src}')"><img src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonTranslation.gif" border="0"></a></td>          
+        </tr>
+ <!-- END Row -->
+        <!-- BEGIN NoRecords -->
+        <tr class="NoRecords">
+          <td colspan="6">{res:CCS_NoRecords} </td> 
+        </tr>
+ <!-- END NoRecords -->
+        <tr class="Footer">
+          <td colspan="6">
+            <!-- BEGIN Navigator Navigator -->
+            <!-- BEGIN First_On --><a href="{First_URL}"><img src="../Styles/{CCS_Style}/Images/First.gif" border="0"></a> <!-- END First_On -->
+            <!-- BEGIN First_Off --><img src="../Styles/{CCS_Style}/Images/FirstOff.gif" border="0"><!-- END First_Off -->
+            <!-- BEGIN Prev_On --><a href="{Prev_URL}"><img src="../Styles/{CCS_Style}/Images/Prev.gif" border="0"></a> <!-- END Prev_On -->
+            <!-- BEGIN Prev_Off --><img src="../Styles/{CCS_Style}/Images/PrevOff.gif" border="0"><!-- END Prev_Off -->&nbsp;{Page_Number}
+            {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+            <!-- BEGIN Next_On --><a href="{Next_URL}"><img src="../Styles/{CCS_Style}/Images/Next.gif" border="0"></a> <!-- END Next_On -->
+            <!-- BEGIN Next_Off --><img src="../Styles/{CCS_Style}/Images/NextOff.gif" border="0"><!-- END Next_Off -->
+            <!-- BEGIN Last_On --><a href="{Last_URL}"><img src="../Styles/{CCS_Style}/Images/Last.gif" border="0"></a> <!-- END Last_On -->
+            <!-- BEGIN Last_Off --><img src="../Styles/{CCS_Style}/Images/LastOff.gif" border="0"><!-- END Last_Off --><!-- END Navigator Navigator --></td> 
+        </tr>
+ 
+      </table>
+ </td> 
+  </tr>
+</table>
+<!-- END Grid email_templates -->
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:day_events}</title>
+<link href="Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+<script language="JavaScript">
+function openWin(url) {
+	var w_left = Math.ceil(screen.width/2-300);
+	var openWin = window.open(url,"VoteWin","left="+w_left+",top=30,scrollbars=no,menubar=no,height=450,width=600,resizable=yes,toolbar=no,location=no,status=no"); 
+	openWin.focus();
+}
+</script>
+</head>
+<body>
+{header} 
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">{infopanel}</td> 
+    <td style="VERTICAL-ALIGN: top; TEXT-ALIGN: left" valign="top" align="left"  width="100%">
+      <!-- BEGIN Label FullViewEvents -->{FullViewEvents} <!-- END Label FullViewEvents -->
+      <!-- BEGIN Panel ShortViewEvents -->
+      <table cellspacing="0" cellpadding="0" width="65%" border="0">
+        <tr>
+          <td valign="top">
+            <!-- BEGIN Grid ShortViewEventsGrid -->
+            <table class="Header" cellspacing="0" cellpadding="0" border="0">
+              <tr>
+                <td class="HeaderLeft"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                <th>
+                  {res:day_events}, {CalendarDate} 
+                  <!-- BEGIN Link add_event -->&nbsp;&nbsp;&nbsp;<a href="{add_event_Src}"><img src="images/icon-add-big.gif" border="0"></a><!-- END Link add_event -->
+                </th>
+ 
+                <td class="HeaderRight"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+              </tr>
+            </table>
+ 
+            <table class="Grid" cellspacing="0" cellpadding="0">
+              <!-- BEGIN Row -->
+              <tr class="Row">
+                <th width="10%"><b>
+                <!-- BEGIN Label event_time -->{event_time}&nbsp;-<!-- END Label event_time -->&nbsp;{event_time_end}</b></th>
+ 
+                <td width="90%">
+                  <!-- BEGIN Image category_image --><img hspace="3" src="images/categories/{category_image}" vspace="3"><!-- END Image category_image --><a href="{event_title_Src}">{event_title}</a> 
+                  <!-- BEGIN Label category_name -->({category_name})<!-- END Label category_name --></td>
+              </tr>
+ <!-- END Row -->
+              <!-- BEGIN NoRecords -->
+              <tr class="NoRecords">
+                <td colspan="2">{res:no_events_day}</td>
+              </tr>
+              <!-- END NoRecords -->
+            </table>
+            <!-- END Grid ShortViewEventsGrid -->
+            <!-- BEGIN Record ShortViewEventsNavigator -->
+            <form name="{HTMLFormName}" action="{Action}" method="post">
+              <table class="Calendar" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error --><!-- END Error -->
+                <tr class="CalendarNavigator" style="TEXT-ALIGN: left">
+                  <td>
+                    <table>
+                      <tr>
+                        <td><a href="{prev_day_link_Src}"><img src="Styles/{CCS_Style}/Images/Prev.gif" border="0"></a></td> 
+                        <td>
+                          <select name="{date_day_Name}">
+                            {date_day_Options}
+                          </select>
+                        </td> 
+                        <td>
+                          <!-- BEGIN Button ButtonGo --><input type="image" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonGo.gif" value="{res:go}" border="0" name="{Button_Name}"><!-- END Button ButtonGo --></td> 
+                        <td><a href="{next_day_link_Src}"><img src="Styles/{CCS_Style}/Images/Next.gif" border="0"></a></td> 
+                        <td>&nbsp;&nbsp;</td> 
+                        <td>
+                          <select name="{week_Name}">
+                            {week_Options}
+                          </select>
+                        </td> 
+                        <td>
+                          <!-- BEGIN Button Button_DoSearch --><input type="image" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonGo.gif" value="{res:go}" border="0" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+                        <td align="right" width="100%">
+						<a href="{YearIcon_Src}"><img src="images/icon-year.gif" border="0"></a>
+						<a href="{MonthIcon_Src}"><img src="images/icon-month.gif" border="0"></a>
+						<a href="{WeekIcon_Src}"><img src="images/icon-week.gif" border="0"></a>
+						</td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <!-- END Record ShortViewEventsNavigator --></td>
+        </tr>
+      </table>
+      <!-- END Panel ShortViewEvents --></td>
+  </tr>
+</table>
+{footer}
+</body>
+</html>

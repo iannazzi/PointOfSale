@@ -1,0 +1,169 @@
+.operating_expense_table
+{
+		width:100%;
+		font-family:verdana,arial,helvetica,sans-serif; 
+		padding: 0;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+    	/*border-style: none;*/
+	}
+	.operating_expense_table thead th
+	{
+		
+
+	}
+	
+.operating_expense_table tbody 
+	{
+	   margin: 0;
+	   padding: 0;
+	   border-left:  1px none rgb(200,200,200); 
+	   border-right:  1px none rgb(200,200,200); 
+	   border-top:  1px solid rgb(0,0,0); 
+	   /*border-bottom:  1px solid rgb(200,200,200); */
+		line-height:1em;
+		text-align:center;
+		font-size:0.8em;
+		/*vertical-align: bottom;*/
+
+	}
+	.operating_expense_table tbody th
+	{		 
+		
+		font-size: 0.8em;
+		text-align:right;
+		vertical-align: top;
+		padding: 0px;
+		margin: 0px;
+	}
+	.operating_expense_table .income_footer 
+	{
+	   margin: 0;
+	   
+		border-left:  1px none rgb(200,200,200); 
+	   border-right:  1px none rgb(0,200,200); 
+	   border-top:  2px solid rgb(0,0,0); 
+	   border-bottom:  1px none rgb(200,200,200); 
+		line-height:1em;
+		text-align:center;
+		font-size:0.9em;
+		
+	}
+
+	.operating_expense_table .income_summary
+	{
+		
+		border-left:  0px solid rgb(50,50,50); 
+	   border-right:  0px solid rgb(50,50,50); 
+	   border-top:  0px solid rgb(50,50,50); 
+	   border-bottom:  0px solid rgb(50,50,50); 
+	   padding: 0px 0px 10px 0px;
+	    margin: 0px 0px 10px 0px;
+	   
+	}
+	.operating_expense_table .income_summary th
+	{
+		font-size:0.75em;
+		font-weight: normal;
+	}
+
+	.operating_expense_table .title_body
+	{
+		
+		border-left:  0px solid rgb(50,50,50); 
+	   border-right:  0px solid rgb(50,50,50); 
+	   border-top:  0px solid rgb(50,50,50); 
+	   border-bottom:  0px solid rgb(50,50,50); 
+	}
+
+	
+	.operating_expense_table .noborder
+	{
+	   border-left:  0px solid rgb(50,50,50); 
+	   border-right:  0px solid rgb(50,50,50); 
+	   border-top:  0px solid rgb(50,50,50); 
+	   border-bottom:  0px solid rgb(50,50,50); 	
+	}
+	
+	.operating_expense_table .currency
+	{
+	   width:1%;
+	   padding-right: 1px;
+	   padding-left: 15px;
+	   border-left:  0px solid rgb(50,50,50); 
+	   border-right:  0px solid rgb(50,50,50); 
+	   border-top:  0px solid rgb(50,50,50); 
+	   border-bottom:  0px solid rgb(50,50,50); 
+	   text-align: right;
+	}
+	
+	.operating_expense_table .title
+	{
+		font-size: 1.2em;
+		text-align: left;
+		padding: 10px 0px 5px 0px;
+		vertical-align: bottom;
+	}
+	.operating_expense_table .calc
+	{
+		font-size: 1em;
+		text-align: right;
+		vertical-align: middle;
+		padding: 0px 0px 0px 0px;
+		vertical-align: bottom;
+	}
+	.operating_expense_table .month
+	{
+		text-align:center;
+		font-size: 0.7em;
+		vertical-align: bottom;
+		width: 6%;
+	}
+	.operating_expense_table .summary_line
+	{
+		
+	}
+
+	.operating_expense_table  .data tr:nth-child(even) {background: RGB(240,240,240);}
+	.operating_expense_table  .data tr:nth-child(odd) {background: #FFF;}
+	.operating_expense_table tr:hover td {background: #CCC;}
+	
+	.year
+	{
+		border-width: 0px 0px 1px 0px;
+		border-color: rgb(210,210,210);
+		border-style: solid;
+		
+		text-align: center;
+		padding: 0px 0px 0px 0px;
+		margin:0px 4px 0px 4px;
+	}
+	.store_select
+	{
+		border-width: 0px 0px 1px 0px;
+		border-color: rgb(210,210,210);
+		border-style: solid;
+		padding: 0px 0px 0px 0px;
+		margin:0px 4px 0px 4px;
+	}
+	.income_logo
+	{
+		font-family: <?php echo LOGO_FONT ?>;
+		font-size: 1.8em;
+	}
+	.income_logo2
+	{
+		font-size: 1.2em;
+	}
+
+	.statement_frame
+	{
+		padding: 10px 0px 10px 0px;
+		border-width: 4px 0px 4px 0px;
+		border-color: rgb(0,0,0);
+		border-style: solid;
+		margin:40px 0px 40px 0px;
+		
+	}

@@ -1,0 +1,370 @@
+	/************************************  PO SUMMARY (OVERVIEW) Table  - Goes on top of POC  ************/
+		
+		#po_summary
+		{
+			width:100%;
+			color: rgb(0,0,0);
+			padding: 0px 0px 1px 0px;
+			margin: 0px;
+			/*border-collapse:collapse;*/
+			border-top: 1px solid black; 
+			border-left: 1px solid black;
+			border-right: 1px solid black;
+			border-bottom: 1px solid black;
+			text-align: left;
+		}
+		
+	.po_summary_div
+	{
+	padding: 10px 0px 0px 0px;
+	margin: 0px;
+	}
+	
+	#po_summary th,td
+	{
+		border: 0px solid black;
+		padding: 0px;
+		margin: 0px;
+		
+	}
+
+	#po_summary #poc_supplierName
+	{
+	}
+
+		
+		
+/******************************************************** POc TABLE **********************************************************/	
+	.poc_table_div
+	{
+	padding: 0;
+		margin: 0;
+		border :0;
+	}
+	
+	/*#poc_table tr.odd{
+		background-color:#efefef;
+	}
+		#poc_table tr.even{
+	background-color:#fff;
+	}
+*/
+	#poc_table
+	{
+		width:100%;
+		font-family:verdana,arial,helvetica,sans-serif; 
+		padding: 0;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+    	border-style: none;
+	}
+	#poc_table thead th
+	{
+		
+	margin: 0;
+	   padding: 0;
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+
+
+		line-height:10px;
+		text-align:center;
+		font-size:10px;
+
+	}
+	#poc_table tbody td
+	{
+		 
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+
+		text-align:center;
+		vertical-align: middle;
+		padding: 0px;
+		margin: 0px;
+	}
+	#poc_table tfoot td
+	{
+		 
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+
+		text-align:center;
+		vertical-align: bottom;
+		padding: 0px;
+		margin: 0px;
+		/*line-height:10px;
+		
+		font-size:10px;*/
+	}
+	/* use this instead of #poc_table tfoot td #poc_total to adjust the value */
+
+	
+	#poc_table tfoot #emptyCell
+	{
+		border-top: 0px none rgb(255,25,25); 
+		border-left:  0px none rgb(255,25,25); 
+		border-right:  0px none rgb(255,25,25); 
+		border-bottom:  0px none rgb(255,25,25);
+	
+	}
+	
+	
+	#poc_table textarea{
+		width: 100%;
+		height: 15px;
+		border-width: 0;
+		margin: 0;
+		font-size:8px;
+		padding: 0;
+		overflow:auto;
+		
+	}
+	input
+	{
+		width:100%;
+	}
+
+	label {
+	
+	}
+	
+	.poColorCode
+	{
+	}
+	.poStyle
+	{
+	text-align: center;
+	}
+	.poCurrency
+	{
+	text-align: center;
+	}
+	.poSizes
+	{
+	text-align: center;
+	}
+	
+	.container{width:100%;}
+
+
+
+
+	.button
+	{
+		width: 100px;
+		padding: 2px 8px; 
+		margin: 2px 4px 6px 0px; 
+	}
+	.email_button
+	{
+		width: 400px;
+		padding: 2px 8px; 
+		margin: 2px 4px 6px 0px; 
+	}
+		.email_button:hover
+	{
+	  background: black;
+	  color: white;
+	} 
+	.CreatePurchaseOrderButton
+	{
+	width: 100px;
+	padding: 2px 8px; 
+	margin: 2px 4px 6px 0px;
+	}
+		.CreatePurchaseOrderButton:hover
+	{
+	  background: black;
+	  color: white;
+	} 
+		.centerButton
+	{
+		width: 100px;
+		padding: 2px 8px; 
+		margin: 2px 40px 6px 200px;
+
+	}
+		.centerButton:hover
+	{
+	  background: black;
+	  color: white;
+	}  
+	.rightButton
+	{
+		width: 100px;
+		padding: 2px 8px; 
+		margin: 2px 0px 6px 4px;
+		float:right;
+	}
+	.rightButton:hover
+	{
+	  background: black;
+	  color: white;
+	}    
+	.poSavebutton
+	{
+	width: 100px;
+	padding: 2px 8px; 
+	/*margin: 2px 4px 6px 0px;*/
+	
+
+	}
+		.poSavebutton:hover
+	{
+	  background: black;
+	  color: white;
+	}   
+	.poSavebutton2
+	{
+	width: 200px;
+	padding: 2px 20px 2px 20px;
+	margin: 2px 8px 6px 4px;
+
+
+	}
+			.poSavebutton2:hover
+	{
+	  background: black;
+	  color: white;
+	}   
+	
+	.slave_selected_size_row
+	{
+		color: rgb(190,190,190);
+	}
+	.unselected_size_row
+	{
+		color: rgb(240,240,240);
+	}
+	.selected_size_row
+	{
+		color: rgb(255,0,0);
+	}
+	.poc_text
+	{
+		font-size: 0.8em;
+		color: rgb(0,0,0);
+		font-weight: bold;
+	}
+	.poc_td_readonly
+	{
+		font-size: 0.8em;
+	}
+	
+	#poc_table  #poc_tbody tr:nth-child(even) {background: RGB(240,240,240);}
+	#poc_table  #poc_tbody tr:nth-child(odd) {background: #FFF;}
+	
+	#poc_table  #poc_tbody  tr:nth-child(even) input {background: RGB(240,240,240);}
+	#poc_table  #poc_tbody  tr:nth-child(odd) input {background: #FFF;}
+	
+	#poc_table  #poc_tbody  tr:nth-child(even) textarea {background: RGB(240,240,240);}
+	#poc_table  #poc_tbody  tr:nth-child(odd) teaxtarea {background: #FFF;}
+	  	#poc_table tr:hover td {background: #CCC;}
+
+	
+/******************************************************** PO TABLE **********************************************************/	
+html.busy, html.busy * {  
+  cursor: wait !important;  
+} 
+.ui-autocomplete-loading 
+{ 
+	background: white url("http://www.embrasse-moi.com/POS/includes/3rdParty/jQueryUI/jquery-ui-1.8.18.custom/css/custom-theme/images/ui-anim_basic_16x16.gif") right center no-repeat; 
+}
+	.footer  
+{
+     
+   
+     color: rgb(200,200,200);
+		font:0.8em Arial, Helvetica, "bitstream vera sans", sans-serif;
+		text-align: center;
+     
+     position: absolute;
+     bottom: 0px;
+     left: 0px;
+     width: 100%;
+     height: 18px
+     }
+.waiting { cursor: wait; }
+
+
+.receive_purchase_order_table
+{		
+		width:100%;
+		padding: 0px 0px 0px 0px;
+		margin: 0;
+		border-width: 0 0 0px 0px;
+   		border-spacing: 0;
+    	border-collapse: collapse;
+}
+.receive_purchase_order_table tbody 
+{
+	   margin: 0;
+	   padding: 0;
+	   border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+		line-height:1em;
+		text-align:center;
+		font-size:0.8em;
+		/*vertical-align: bottom;*/
+}
+.receive_purchase_order_table tbody input
+{
+	color:black;
+	text-align:center;
+	width:100%;
+}
+.receive_purchase_order_table tbody td
+{
+		text-align:center;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+
+.receive_purchase_order_table .lined_cell
+{
+		text-align:center;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+.receive_purchase_order_table tfoot td
+{
+		
+	
+	   border-top: 0px none rgb(255,25,25); 
+		border-left:  0px none rgb(255,25,25); 
+		border-right:  0px none rgb(255,25,25); 
+		border-bottom:  0px none rgb(255,25,25);
+}
+.receive_purchase_order_table thead th
+{
+		padding: 0px 10px 0px 10px;
+		border-left:  1px solid rgb(50,50,50); 
+	   border-right:  1px solid rgb(50,50,50); 
+	   border-top:  1px solid rgb(50,50,50); 
+	   border-bottom:  1px solid rgb(50,50,50); 
+}
+.receive_purchase_order_table .product_subid
+{
+
+	padding: 0px 10px 0px 10px;
+}
+.receive_purchase_order_table   tbody tr:nth-child(even) {background: RGB(240,240,240)}
+.receive_purchase_order_table  tbody tr:nth-child(odd) {background: #FFF}
+  	.receive_purchase_order_table tr:hover td {background: #CCC;}
+
+

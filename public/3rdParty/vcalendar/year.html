@@ -1,0 +1,105 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:yearevents}</title>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style.css">
+<script language="JavaScript" type="text/javascript">
+function show(divID) {
+  document.getElementById('div'+divID).style.visibility = "visible";
+}
+
+function hide(divID) {
+  document.getElementById('div'+divID).style.visibility = "hidden";
+}
+</script>
+</head>
+<body>
+{header}
+<table border="0" cellspacing="5" cellpadding="0">
+  <tr>
+    <td valign="top">{infopanel}</td> 
+    <td valign="top" width="100%">
+      <!-- Right column -->
+      <!-- BEGIN Calendar year_events -->
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td>
+            <table cellspacing="0" cellpadding="0" border="0" class="Header">
+              <tr>
+                <td class="HeaderLeft"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+                <th>{res:yearevents}, {CurYearLabel}</th>
+                <td class="HeaderRight"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+              </tr>
+            </table>
+            <table cellspacing="3" cellpadding="0" class="Calendar">
+              <tr valign="top">
+                <!-- BEGIN Month -->
+                <td>
+                  <table cellspacing="0" cellpadding="0" class="Grid">
+                    <tr class="Caption">
+                      <th colspan="8"><a href="{MonthDate_Src}">{MonthDate}</a></th>
+                    </tr>
+                    <tr>
+                      <!-- BEGIN WeekDays -->
+                      <td width="14.29%" {Style}>{DayOfWeek}</td> <!-- END WeekDays -->
+					  <!-- BEGIN Panel GoWeekHeader --><td class="CalendarWeekdayName">&nbsp;</td><!-- END Panel GoWeekHeader -->
+					<!-- BEGIN Week -->
+                    </tr>
+ 
+                    <tr>
+                      <!-- BEGIN Day -->
+                      <td {Style}><a href="{DayNumber_Src}" {LinkStyle}>{DayNumber}</a> 
+						{div_begin}
+						<!-- BEGIN EventRow -->
+                        <div class="CalendarEvent"><nobr>
+                          <!-- BEGIN Image CategoryImage --><img src="images/categories/{CategoryImage}" hspace="3" vspace="3"><!-- END Image CategoryImage --><!-- BEGIN Label EventTime -->{EventTime} - <!-- END Label EventTime -->{EventTimeEnd} {EventDescription}</nobr> 
+                        </div>
+						<!-- END EventRow -->{div_end}</td><!-- END Day -->
+                      <!-- BEGIN EmptyDay -->
+                      <td {Style}>&nbsp;</td><!-- END EmptyDay -->
+					  <!-- BEGIN Link GoWeek --><td class="CalendarWeekend"><a href="{GoWeek_Src}"><img border="0" src="images/week.gif" title="{res:cal_week}"></a></td><!-- END Link GoWeek -->
+                    </tr>
+					<!-- END Week -->
+                  </table>
+ </td> <!-- END Month -->
+                <!-- BEGIN MonthsRowSeparator -->
+              </tr>
+ 
+              <tr valign="top">
+                <!-- END MonthsRowSeparator -->
+              </tr>
+ 
+              <tr>
+                <td colspan="{MonthsInRow}" class="CalendarNavigator" style="text-align:left;">
+                  <!-- BEGIN CalendarNavigator Navigator -->
+        <form action="{Action}" method="POST">
+        <input type="hidden" name="ccsForm" value="{CalendarName}">
+        <table>
+        <tr>
+            <!-- BEGIN Prev_Year --><td><a href="{URL}" title="Prev Year"><img border="0" src="Styles/{CCS_Style}/Images/Back.gif" ></a></td><!-- END Prev_Year -->
+            <!-- BEGIN Years --><td><select name="{CalendarName}Year" >
+              <!-- BEGIN Regular_Year --><option value="{Year}">{Year}</option><!-- END Regular_Year -->
+              <!-- BEGIN Current_Year --><option value="{Year}" SELECTED>{Year}</option><!-- END Current_Year -->
+            </select></td><!-- END Years -->
+            
+            <td><input type="image" border="0" value="Submit" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonGo.gif"></td>
+              
+            <!-- BEGIN Next_Year --><td><a href="{URL}" title="Next Year"><img border="0" src="Styles/{CCS_Style}/Images/Forward.gif" ></a></td><!-- END Next_Year -->
+        </tr>
+        </table>
+        </form>
+      <!-- END CalendarNavigator Navigator --></td> 
+              </tr>
+ 
+            </table>
+ </td> 
+        </tr>
+ 
+      </table>
+ <!-- END Calendar year_events --><br>
+    </td> 
+  </tr>
+</table>
+{footer}
+</body>
+</html>

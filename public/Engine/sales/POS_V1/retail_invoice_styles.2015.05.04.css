@@ -1,0 +1,517 @@
+/************************************  RETAIL INVOICE (OVERVIEW) Table  - Goes on top of INVOICE  ************/
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* *******************************DIVS************************************************/
+.payments
+{
+	clear: both;
+	float:left;
+}
+#customer_search_results
+{
+	clear:both;
+}
+.cusAddTable 
+{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-left:  1px solid rgb(50,50,50); 
+   	border-right:  1px solid rgb(50,50,50); 
+  	border-top:  1px solid rgb(50,50,50); 
+  	border-bottom:  1px solid rgb(50,50,50); 
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.cusAddTable th
+{
+	text-align:center;
+	border-left:  1px solid rgb(50,50,50); 
+   	border-right:  1px solid rgb(50,50,50); 
+  	border-top:  1px solid rgb(50,50,50); 
+  	border-bottom:  1px solid rgb(50,50,50); 
+}
+.cusAddTable td
+{
+	border-left:  1px solid rgb(50,50,50); 
+   	border-right:  1px solid rgb(50,50,50); 
+  	border-top:  1px solid rgb(50,50,50); 
+  	border-bottom:  1px solid rgb(50,50,50); 
+	text-align:center;
+	vertical-align: middle;
+	word-wrap:break-word;
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+}
+.cusAddTable input
+{
+	width:100%;
+}
+.cusAddTable tbody tr:nth-child(even) {background: RGB(240,240,240);}
+.cusAddTable tbody tr:nth-child(odd) {background: #FFF;}
+.cusAddTable tr:hover td input { background: #CCC; }
+
+
+
+.retail_sales_invoice_main
+{
+	font-size:1em;
+}
+#invoice_number
+{
+	font-size:1.4em;
+}
+#invoice_date
+{
+	font-size:1.4em;
+}
+.cust_green
+{	
+	background-color:rgb(0,255,0);
+}
+.cust_grey
+{
+		background-color:rgb(225,225,225);
+
+}
+#cust_table
+{	
+	
+	
+}
+.rowred
+{
+	background-color: rgb(255,0,0);
+}
+.cust_table_small
+{
+		font-size:0.5em;
+
+}
+.cust_table
+{
+	width:100%;
+	font-size:1.0em;
+
+}
+.cust_table tr:hover td {background: #CCC;}
+
+.sea2	
+{
+	font-size:1.0em;
+}
+#customer-select-dialog-form
+{
+}
+#customer_search_buttons
+{
+	float:left;
+}
+#customer_add_edit_buttons
+{
+	float:right;
+
+}
+.promotion_table
+{
+  	display:inline-block;
+	width: 50%;
+	vertical-align:bottom;
+}
+.invoice_options
+{
+	display:inline-block;
+	padding-top: 1em;
+	vertical-align:top;
+}
+.invoice_footer
+{
+	display:inline-block;
+	width: 100%;
+}
+
+.invoice_buttons
+{
+	float:left;
+}
+.save_invoice_buttons
+{
+	float:right;
+}
+.payment_buttons
+{
+	float:right;
+}
+.instructions
+{
+	clear: both;
+	 margin-left: auto;
+    margin-right: auto;
+	width: 90%;
+	border-top: 1px solid black; 
+	border-top: 1px solid black; 
+	margin-top: 8em;
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+.instructions li
+{
+	margin-left:2em;
+}
+.invoice_class
+{
+	display: inline-block;
+	width:99%;
+	
+	border-top: 1px solid black; 
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	padding: 2px 2px 2px 2px;
+	
+	margin-right:auto;
+	margin-left:auto;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	background-color: rgb(220,220,220);
+}
+.product_lookup_outline
+{
+	border-top: 1px solid black; 
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 0px solid black;
+	background-color:white;
+}
+.dynamic_contents_table tbody .test
+{
+	
+	text-align: center;
+	vertical-align: middle;
+}
+.retail_sales_invoice_div
+{
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+}
+.customer_invoice_div
+{
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+}
+.retail_sales_invoice_main
+{
+	width:100%;
+	color: rgb(0,0,0);	
+	padding: 0px 0px 1px 0px;
+	margin: 0px;
+	/*border-collapse:collapse;*/
+	border-top: 0px solid black; 
+	border-left: 0px solid black;
+	border-right: 0px solid black;
+	border-bottom: 0px solid black;
+	text-align: left;
+}
+.retail_sales_invoice_main td
+{
+	border: 0px solid black;
+	padding: 0px;
+	margin: 0px;
+}
+.retail_sales_invoice_main th
+{
+	border: 0px solid black;
+	text-align: right;
+	padding: 0px 2px 0px 0px;
+	margin: 0px;
+}
+.retail_sales_invoice_main input
+{
+	border: 1px solid black;
+	text-align: center;
+	padding: 0px;
+	margin: 0px;
+}
+.customer_invoice_main
+{
+	width:100%;
+	color: rgb(0,0,0);	
+	padding: 0px 0px 1px 0px;
+	margin: 0px;
+	/*border-collapse:collapse;*/
+	border-top: 1px solid black; 
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	border-bottom: 1px solid black;
+	text-align: left;
+}
+.return_row tr, .return_row input, .return_row select, .return_row td
+{
+	background-color:rgb(255,127,127);
+}
+
+
+
+.customer_invoice_main th
+{
+	font-size:0.6em;
+}
+.customer_invoice_main input
+{
+	text-align: center;
+}
+#invoice_table_tbody  tr:hover input 
+{
+	background-color: lightyellow;
+}
+#invoice_table_tbody  tr:hover td 
+{
+	background-color: lightyellow;
+}
+#invoice_table_tbody  tr:hover select 
+{
+	background-color: lightyellow;
+}
+
+.disabledCell
+{
+}
+  
+
+#invoice_table
+{
+	width: 100%;
+}
+#invoice_table td
+{
+	font-size: 0.8em;
+}
+/****************************************** Retail invoice Contents **********************************************************/	
+.retail_sales_invoice_contents_div
+{
+	padding: 0;
+	margin: 0;
+	border :0;
+}
+	
+.contents_table
+{
+	width:100%;
+	font-family:verdana,arial,helvetica,sans-serif; 
+	padding: 0;
+	margin: 0;
+	border-width: 0 0 0px 0px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-style: none;
+}
+
+
+ .contents_thead th
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+	text-align:center;
+	font-size:10px;
+
+}
+.contents_table tbody td
+{
+	 
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+
+	text-align:center;
+	vertical-align: middle;
+	padding: 0px;
+	margin: 0px;
+}
+.contents_table tfoot  th
+{
+	margin: 0;
+   padding: 0px 2px 0px 0px;
+   /*border-left:  1px solid rgb(50,50,50); 
+   //border-right:  1px solid rgb(50,50,50); 
+   //border-top:  1px solid rgb(50,50,50); 
+   //border-bottom:  1px solid rgb(50,50,50); */
+	line-height:10px;
+	text-align:right;
+	font-size:10px;
+
+}
+
+/*.contents_tfoot td*/
+.contents_table tfoot td
+{
+	margin: 0;
+   padding: 0;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  1px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+   	text-align:right;
+	font-size:10px;
+
+}
+
+.contents_table tfoot .emptyCell
+{
+	border-top: 0px none rgb(255,255,255); 
+	border-left:  0px none rgb(255,255,255); 
+	border-right:  0px none rgb(255,255,255); 
+	border-bottom:  0px none rgb(255,255,255);
+
+}	
+.contents_table tfoot .footerCell
+{
+
+   
+   	text-align:right;
+	vertical-align: bottom;
+	padding: 0px;
+	margin: 0px;
+}
+.contents_table textarea
+{
+	width: 100%;
+	height: 15px;
+	border-width: 0;
+	margin: 0;
+	font-size:8px;
+	padding: 0;
+	overflow:auto;
+}
+ .readonly
+ {
+ 	color: #999999;
+ }
+.contents_table input
+{
+	width:100%;
+	text-align:center;
+}
+.contents_table .currency
+{
+	text-align:right;
+}
+
+	
+	.contents_table  .contents_tbody tr:nth-child(even) {background: RGB(240,240,240);}
+	.contents_table  .contents_tbody tr:nth-child(odd) {background: #FFF;}
+	
+	.contents_table  .contents_tbody  tr:nth-child(even) input{background: RGB(240,240,240);}
+	.contents_table  .contents_tbody  tr:nth-child(odd) input {background: #FFF;}
+	
+	.contents_table  .contents_tbody  tr:nth-child(even) textarea {background: RGB(240,240,240);}
+	.contents_table  .contents_tbody  tr:nth-child(odd) textarea {background: #FFF;}
+	
+.invoice_summary_table_view
+{
+	padding: 0;
+	margin: 5px 0px 20px 0px;
+	border-width: 0 0 0px 0px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-style: none;
+	float:right;
+	
+}
+.invoice_summary_table_view th
+{
+	margin: 0;
+   padding: 0px 5px 0px 5px;
+   border-left:  1px solid rgb(50,50,50); 
+   border-right:  1px solid rgb(50,50,50); 
+   border-top:  0px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+	text-align:center;
+	font-size:10px;
+
+}
+ .leGrandTotal
+{
+	background-color:rgb(200,200,200);
+	border-bottom:  1px solid rgb(50,50,50); 
+}
+.invoice_summary_table_view tbody td
+{
+	 
+   border-left:  0px solid rgb(50,50,50); 
+   border-right:  0px solid rgb(50,50,50); 
+   border-top:  0px solid rgb(50,50,50); 
+   border-bottom:  0px solid rgb(50,50,50); 
+ 	padding: 0px 4px 0px 4px;
+	text-align:center;
+	vertical-align: bottom;
+	font-size: 0.8em;
+	
+
+}
+.invoice_summary_table
+{
+	/*width:100%;*/
+	padding: 0;
+	margin: 5px 0px 20px 0px;
+	border-width: 0 0 0px 0px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	border-style: none;
+	float: right;
+}
+.invoice_summary_table th
+{
+	margin: 0;
+   padding: 0px 5px 0px 5px;
+   border-left:  0px solid rgb(50,50,50); 
+   border-right:  0px solid rgb(50,50,50); 
+   border-top:  0px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+	line-height:10px;
+	text-align:center;
+	font-size:10px;
+
+}
+.invoice_summary_table tbody td
+{
+	 
+   border-left:  0px solid rgb(50,50,50); 
+   border-right:  0px solid rgb(50,50,50); 
+   border-top:  0px solid rgb(50,50,50); 
+   border-bottom:  0px solid rgb(50,50,50); 
+ 	padding: 0px 4px 0px 4px;
+	text-align:center;
+	vertical-align: bottom;
+	font-size: 0.8em;
+
+}
+.invoice_summary_table tbody input
+{
+	 
+   border-left:  0px solid rgb(50,50,50); 
+   border-right:  0px solid rgb(50,50,50); 
+   border-top:  0px solid rgb(50,50,50); 
+   border-bottom:  1px solid rgb(50,50,50); 
+ 	padding: 0px 4px 0px 4px;
+	text-align:center;
+	vertical-align: bottom;
+	font-size: 0.9em;
+
+}

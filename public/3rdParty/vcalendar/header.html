@@ -1,0 +1,38 @@
+{html_header} 
+<!-- BEGIN Record HMenu -->
+<table class="Calendar" cellspacing="0" cellpadding="0">
+  <form name="{HTMLFormName}" action="{Action}" method="post">
+    <tr class="CalendarOtherMonthDay">
+      <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px;" nowrap><a class="menulink" href="{year_Src}">{res:cal_year}</a> &middot; <a class="menulink" href="{month_Src}">{res:cal_month}</a> &middot; <a class="menulink" href="{week_Src}">{res:cal_week}</a> &middot; <a class="menulink" href="{day_Src}">{res:cal_day}</a> &middot; <a class="menulink" href="{search_Src}">{res:cal_search}</a> &middot; 
+        <!-- BEGIN Link add_event --><a class="menulink" href="{add_event_Src}">{res:cal_add_event}</a> &middot; <!-- END Link add_event -->
+        <!-- BEGIN Panel LoginPanel -->
+        <!-- BEGIN Link RegLink --><a class="menulink" href="{RegLink_Src}">{res:cal_registration}</a> &middot; <!-- END Link RegLink --><a class="menulink" href="{login_Src}">{res:CCS_Login}</a><!-- END Panel LoginPanel -->
+        <!-- BEGIN Panel user_logout --><a class="menulink" href="{profile_Src}">{res:cal_profile}</a> &middot; 
+        <!-- BEGIN Link administration_link --><a class="menulink" href="{administration_link_Src}">{res:cal_administration}</a> &middot; <!-- END Link administration_link --><a class="menulink" href="{logout_Src}">{res:CCS_LogoutBtn}</a> [{user_login}] <!-- END Panel user_logout -->&nbsp;&nbsp; </td> 
+      <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px;" nowrap>
+        <!-- BEGIN ListBox style -->
+        <select name="{style_Name}">
+          <option value="" selected>-- {res:cal_style} --</option>
+ {style_Options} 
+        </select>
+ <!-- END ListBox style -->
+        <!-- BEGIN ListBox locale -->
+        <select name="{locale_Name}">
+          <option value="" selected>-- {res:cal_language} --</option>
+ {locale_Options} 
+        </select>
+ <!-- END ListBox locale -->
+        <!-- BEGIN ListBox categories -->
+        <select name="{categories_Name}">
+          <option value="" selected>-- {res:cal_category} --</option>
+ {categories_Options} 
+        </select>
+ <!-- END ListBox categories --></td> 
+      <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px;" nowrap>
+        <!-- BEGIN Button Button_Apply --><input type="image" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonApply.gif" value="{res:cal_btn_apply}" border="0" name="{Button_Name}"><!-- END Button Button_Apply --></td> 
+      <td style="TEXT-ALIGN: left;font-size: 100%;padding: 5px; width:100%">&nbsp;</td>
+    </tr>
+ 
+  </form>
+</table>
+<!-- END Record HMenu -->

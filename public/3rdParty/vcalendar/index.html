@@ -1,0 +1,116 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Open Source Web Calendar Application - {res:month_events}</title>
+<link rel="stylesheet" type="text/css" href="Styles/{CCS_Style}/Style.css">
+<script language="JavaScript">
+function openWin(url) {
+	var w_left = Math.ceil(screen.width/2-300);
+	var openWin = window.open(url,"VoteWin","left="+w_left+",top=30,scrollbars=no,menubar=no,height=450,width=600,resizable=yes,toolbar=no,location=no,status=no"); 
+	openWin.focus();
+}
+</script>
+</head>
+<body>
+{header}
+<table border="0" cellspacing="5" cellpadding="0" width="100%">
+  <tr>
+	<td valign="top">{infopanel}</td> 
+	<td valign="top" align="left" style="vertical-align:top;text-align:left;" width="100%">
+	  <!-- Right column -->
+	  <!-- BEGIN Calendar cal_month -->
+	  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+		<tr>
+		  <td>
+			<table cellspacing="0" cellpadding="0" border="0" class="Header">
+			  <tr>
+				<td class="HeaderLeft"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+				<th>{res:month_events}, {MonthDate}</th>
+				<td class="HeaderRight"><img border="0" src="Styles/{CCS_Style}/Images/Spacer.gif" /></td> 
+			  </tr>
+			</table>
+
+			<table cellspacing="3" cellpadding="0" class="Calendar">
+			  <tr valign="top">
+				<!-- BEGIN Month -->
+				<td>
+				  <table cellspacing="0" cellpadding="0" class="Grid">
+					<tr>
+					  <!-- BEGIN WeekDays -->
+					  <td width="14.29%" {Style}>{DayOfWeek}</td> <!-- END WeekDays -->
+					  <td class="CalendarWeekdayName">&nbsp;</td>
+					</tr>
+					<!-- BEGIN Week -->
+					<tr height="60">
+					  <!-- BEGIN Day -->
+					  <td {Style} style="vertical-align:top;text-align:left;">
+						<div style="float:left;"><a href="{DayNumber_Src}">{DayNumber}</a></div>
+						<!-- BEGIN Link add_event --><div style="float:right;"><a href="{add_event_Src}"><img border="0" src="images/icon-add-big.gif"></a></div><!-- END Link add_event -->
+						<br>
+						<!-- BEGIN EventRow -->
+						<div class="CalendarEvent" style="text-align: left;">
+						  <!-- BEGIN Image category_image --><img src="images/categories/{category_image}" hspace="3" vspace="3"><!-- END Image category_image -->
+						  <!-- BEGIN Label EventTime -->{EventTime} - <!-- END Label EventTime -->{EventTimeEnd}
+						  <a href="{EventDescription_Src}">{EventDescription}</a> 
+						</div>
+						<!-- END EventRow -->
+					  </td>
+					  <!-- END Day -->
+					  <!-- BEGIN EmptyDay -->
+					  <td {Style}>&nbsp;</td><!-- END EmptyDay -->
+					  <td class="CalendarWeekend"><a href="{go_week_Src}"><img border="0" src="images/icon-week.gif" title="{res:cal_week}"></a></td>
+					</tr>
+					<!-- END Week -->
+				  </table>
+				</td>
+				<!-- END Month -->
+				<!-- BEGIN MonthsRowSeparator -->
+			  </tr>
+			  <tr valign="top">
+			    <!-- END MonthsRowSeparator -->
+			  </tr>
+
+			  <tr>
+				<td colspan="{MonthsInRow}" class="CalendarNavigator" style="text-align:left;">
+				  <table>
+					<tr>
+					  <!-- BEGIN CalendarNavigator Navigator -->
+					    <input type="hidden" name="ccsForm" value="{CalendarName}">
+					    <form action="{Action}" method="POST">
+						  <!-- BEGIN Prev_Year --><td><a href="{URL}" title="Prev Year"><img border="0" src="Styles/{CCS_Style}/Images/Back.gif" ></a></td><!-- END Prev_Year -->
+						  <!-- BEGIN Prev --><td><a href="{URL}" title="Prev Month"><img border="0" src="Styles/{CCS_Style}/Images/Prev.gif" ></a></td><!-- END Prev -->
+						  <!-- BEGIN Months --><td><select name="{CalendarName}Month" >
+						  <!-- BEGIN Regular_Month --><option value="{Month}">{MonthShortName}</option><!-- END Regular_Month -->
+						  <!-- BEGIN Current_Month --><option value="{Month}" SELECTED>{MonthShortName}</option><!-- END Current_Month -->
+						  </select></td><!-- END Months -->
+						  <!-- BEGIN Years --><td><select name="{CalendarName}Year" >
+						  <!-- BEGIN Regular_Year --><option value="{Year}">{Year}</option><!-- END Regular_Year -->
+						  <!-- BEGIN Current_Year --><option value="{Year}" SELECTED>{Year}</option><!-- END Current_Year -->
+						  </select></td><!-- END Years -->
+						  <td><input type="image" border="0" value="Submit" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonGo.gif"></td>
+						  <!-- BEGIN Next --><td><a href="{URL}" title="Next Month"><img border="0" src="Styles/{CCS_Style}/Images/Next.gif" ></a></td><!-- END Next -->
+						  <!-- BEGIN Next_Year --><td><a href="{URL}" title="Next Year"><img border="0" src="Styles/{CCS_Style}/Images/Forward.gif" ></a></td><!-- END Next_Year -->
+						</form>
+					  <!-- END CalendarNavigator Navigator -->
+					  <!-- BEGIN Panel CalendarTypes -->
+						<td align="right" width="100%">
+						  <a href="{YearIcon_Src}"><img src="images/icon-year.gif" border="0"></a>
+						  <a href="{MonthIcon_Src}"><img src="images/icon-month.gif" border="0"></a>
+						  <a href="{WeekIcon_Src}"><img src="images/icon-week.gif" border="0"></a>
+						</td>
+					  <!-- END Panel CalendarTypes -->
+					</tr>
+				  </table>
+				</td>
+			  </tr>
+			</table>
+		  </td>
+		</tr>
+	  </table>
+	  <!-- END Calendar cal_month -->
+	</td> 
+  </tr>
+</table>
+{footer}
+</body>
+</html>

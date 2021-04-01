@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>{res:CCS_RecordFormPrefix} {res:email_template} {res:CCS_RecordFormSuffix}</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../Styles/{CCS_Style}/Style.css">
+<script language="JavaScript">
+function open_preview() {
+	var w_left = Math.ceil((screen.width-480)/2);
+	var PrevWin=open("", "preview", "top=10,left="+w_left+",width=440,height=350,status=no,toolbar=no,menubar=no,location=no,resizable=yes,scrollbars=yes");
+	PrevWin.focus();
+	PrevWin.document.open();
+	PrevWin.document.write("<html><head><title>{res:preview}</title></head><body>");
+
+	var str = document.email_templates.email_template_body.value;
+	str = str.replace(/\n/g, "<br>");
+	PrevWin.document.write(str);
+	PrevWin.document.write('</body></html>');
+	PrevWin.document.close();  
+}
+</script>
+</head>
+<body>
+{header}
+<!-- BEGIN Record email_templates -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <th>{res:CCS_RecordFormPrefix} {res:email_template} {res:CCS_RecordFormSuffix} </th>
+ 
+            <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+          </tr>
+ 
+        </table>
+ 
+        <table class="Record" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td> 
+          </tr>
+ <!-- END Error -->
+          <tr class="Controls">
+            <th>{res:email_template_type}</th>
+ 
+            <td>{email_template_type}&nbsp;</td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:email_template_desc}</th>
+ 
+            <td><input maxlength="250" size="50" value="{email_template_desc}" name="{email_template_desc_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:email_template_from}</th>
+ 
+            <td><input maxlength="50" size="50" value="{email_template_from}" name="{email_template_from_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:email_template_subject}&nbsp;*</th>
+ 
+            <td><input maxlength="250" size="50" value="{email_template_subject}" name="{email_template_subject_Name}"></td> 
+          </tr>
+ 
+          <tr class="Controls">
+            <th>{res:email_template_body} * </th>
+ 
+            <td><textarea name="{email_template_body_Name}" rows="15" cols="50">{email_template_body}</textarea></td> 
+          </tr>
+ 
+          <tr class="Bottom">
+            <td align="right" colspan="2">
+			  <!-- BEGIN Button Button_Preview --><input name="{Button_Name}" type="image" value="{res:preview}" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonPreview.gif" onclick="open_preview(); return false;"><!-- END Button Button_Preview -->
+              <!-- BEGIN Button Button_Update --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" border="0" name="{Button_Name}"><!-- END Button Button_Update -->
+              <!-- BEGIN Button Button_Cancel --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonCancel.gif" value="{res:CCS_Cancel}" border="0" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+          </tr>
+        </table>
+ </td> 
+    </tr>
+  </table>
+</form>
+<!-- END Record email_templates -->
+</body>
+</html>

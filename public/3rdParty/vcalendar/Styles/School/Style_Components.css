@@ -1,0 +1,682 @@
+/* CCSTheme v 3.x */
+/* General */
+
+
+
+.HeaderSchool {
+	width: 100%;
+	}
+
+.HeaderSchool th { 
+	font-family: Tahoma; font-size: 110%; font-weight: bold; text-align: left;
+	padding: 3px;
+	background-image: url('Images/HeaderBg.gif'); color: #ffffff;
+	width: 100%;
+	white-space: nowrap;
+	}
+
+.HeaderSchool a:link { 
+	color: #ffffff;
+	}
+
+.HeaderSchool a:visited { 
+	color: #ffffff;
+	}
+
+.HeaderSchool a:hover, .CaptionSchool a:active { 
+	color: #ffffff; text-decoration: none;
+	}
+
+.HeaderLeftSchool { 
+	background-image: url('Images/HeaderLeft.gif');
+	}
+
+.HeaderRightSchool { 
+	background-image: url('Images/HeaderRight.gif');
+	}
+
+.HeaderLeftSchool img{
+	width: 7px;
+	}
+
+.HeaderRightSchool img{
+	width: 14px;
+	}
+
+
+/* Grid Options */
+.GridSchool { 
+	border: 1px solid #777777; border-left: 0px;
+	width: 100%;
+	}
+
+.CaptionSchool th { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #777777; border-left: 1px solid #777777; border-bottom: 1px solid #777777;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionSchool td { 
+	font-family: Tahoma; font-size: 80%; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-top: 1px solid #777777; border-left: 1px solid #777777; border-bottom: 1px solid #777777;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	white-space: nowrap;
+	}
+
+.CaptionSchool a:link { 
+	color: #000000;
+	}
+
+.CaptionSchool a:visited { 
+	color: #000000;
+	}
+
+.CaptionSchool a:hover, .CaptionSchool a:active { 
+	color: #ff0000;
+	}
+
+.CaptionSchool img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.CaptionSchool input {
+	vertical-align: middle;
+	}
+
+.RowSchool th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.RowSchool td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+.RowSchool a:link { 
+	color: #0033cc;
+	}
+
+.RowSchool a:visited { 
+	color: #840084;
+	}
+
+.RowSchool a:hover, .RowSchool a:active { 
+	color: #ff0000;
+	}
+
+.SeparatorSchool{
+	color: #777777;
+	}
+
+.SeparatorSchool td{
+	height: 1px;
+	}
+
+
+.AltRowSchool th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.AltRowSchool td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	vertical-align: top;
+	background-color: #ececec; 
+	color: #000000;
+	}
+
+.AltRowSchool a:link { 
+	color: #0033cc;
+	}
+
+.AltRowSchool a:visited { 
+	color: #840084;
+	}
+
+.AltRowSchool a:hover, .AltRowSchool a:active { 
+	color: #ff0000;
+	}
+
+.NoRecordsSchool td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	background-color: #f7f7f7; 
+	color: #000000;
+	vertical-align: top;
+	}
+
+.FooterSchool td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #777777; border-left: 1px solid #777777;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.FooterSchool a:link { 
+	color: #0033cc;
+	}
+
+.FooterSchool a:visited { 
+	color: #840084;
+	}
+
+.FooterSchool a:hover, .FooterSchool a:active { 
+	color: #ff0000;
+	}
+
+.FooterSchool img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.FooterSchool input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Record Options */
+.RecordSchool { 
+	border: 1px solid #777777; border-left: 0px;
+	width: 100%;
+	}
+
+.ErrorSchool td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #777777; border-left: 1px solid #777777; border-bottom: 1px solid #777777;
+	color: #FF0000;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	}
+
+.ControlsSchool th { 
+	font-family: Tahoma; font-size: 80%; font-weight: normal; text-align: left; vertical-align: top;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	background-color: #f7f7f7; color: #000000;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.ControlsSchool td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	vertical-align: top;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+.BottomSchool td { 
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #777777; border-left: 1px solid #777777;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: right;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.BottomSchool a:link { 
+	color: #0033cc;
+	}
+
+.BottomSchool a:visited { 
+	color: #840084;
+	}
+
+.BottomSchool a:hover, .CaptionSchool a:active { 
+	color: #ff0000;
+	}
+
+.BottomSchool img {
+	margin: 2px;
+	vertical-align: middle; 
+	}
+
+.BottomSchool input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+/* Report */
+.GroupCaptionSchool th{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	white-space: nowrap;
+	text-align: left; 
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ececec; 
+	color: #000000;
+	}
+
+.GroupCaptionSchool td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #f7f7f7; 
+	color: #000000;
+	}
+
+.GroupCaptionSchool a:link {
+	color: #000000;
+	}
+
+.GroupCaptionSchool a:visited{
+	color: #000000;
+	}
+
+.GroupCaptionSchool a:hover, .GroupCaptionSchool a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterSchool td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #777777; border-left: 1px solid #777777;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	background-color: #d7d7d7; 
+	color: #000000;
+	}
+
+.GroupFooterSchool a:link {
+	color: #0033cc;
+	}
+
+.GroupFooterSchool a:visited{
+	color: #840084;
+	}
+
+.GroupFooterSchool a:hover, .GroupFooterSchool a:active{
+	color: #ff0000;
+	}
+
+.GroupFooterSchool img {
+	margin: 2px; 
+	vertical-align: middle;
+	}
+
+.GroupFooterSchool input {
+	margin: 2px;
+	vertical-align: middle;
+	}
+
+.SubTotalSchool td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	vertical-align: top;
+	font-weight: bold;
+	background-color: #ececec; 
+	color: #000000;
+	border-bottom: 2px solid #777777;
+	}
+
+.SubTotalSchool a:link {
+	color: #0033cc;
+	}
+
+.SubTotalSchool a:visited{
+	color: #840084;
+	}
+
+.SubTotalSchool a:hover, .SubTotalSchool a:active{
+	color: #ff0000;
+	}
+
+.TotalSchool td{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	vertical-align: top;
+	white-space: nowrap;
+	font-weight: bold;
+	background-color: #ececec; 
+	color: #000000;
+	}
+
+.TotalSchool a:link {
+	color: #0033cc;
+	}
+
+.TotalSchool a:visited{
+	color: #840084;
+	}
+
+.TotalSchool a:hover, .TotalSchool a:active{
+	color: #ff0000;
+	}
+
+/* Form Options */
+.ButtonSchool { 
+	background-color: #ececec; color: #000000; border: solid 1px #777777; padding: 2px; font-weight: bold; font-size: 85%; font-family: Tahoma;
+	}
+
+/* Calendar */
+
+.CalendarSchool { 
+	border: 1px solid #777777;
+	width: 100%;
+	}
+
+.CalendarWeekdayNameSchool{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #777777; border-left: 1px solid #777777; border-bottom: 1px solid #777777;
+	text-align: center; 
+	vertical-align: top;
+	white-space: nowrap;
+	background-color: #ececec; 
+	color: #000000;
+	}
+
+.CalendarWeekdayNameSchool a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekdayNameSchool a:visited{
+	color: #840084;
+	}
+
+.CalendarWeekdayNameSchool a:hover, .CalendarWeekdayNameSchool a:active{
+	color: #ff0000;
+	}
+
+.CalendarWeekendNameSchool{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-top: 1px solid #777777; border-left: 1px solid #777777; border-bottom: 1px solid #777777;
+	white-space: nowrap;
+	text-align: center; 
+	vertical-align: top;
+	background-color: #ececec;	
+	color: #000000;
+	}
+
+.CalendarWeekendNameSchool a:link {
+	color: #000000;
+	}
+
+.CalendarWeekendNameSchool a:visited{
+	color: #000000;
+	}
+
+.CalendarWeekendNameSchool a:link, .CalendarWeekendNameSchool a:visited{
+	color: #ff0000;
+	}
+
+/* Calendar Day */
+.CalendarDaySchool{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+.CalendarDaySchool a:link {
+	color: #0033cc;
+	}
+
+.CalendarDaySchool a:visited{
+	color: #840084;
+	}
+
+.CalendarDaySchool a:hover, .CalendarDaySchool a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Weekend */
+.CalendarWeekendSchool{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	text-align: center;
+	background-color: #ececec;	
+	color: #000000;
+	}
+
+.CalendarWeekendSchool a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendSchool a:visited{
+	color: #840084;
+	}
+
+.CalendarWeekendSchool a:hover, .CalendarWeekendSchool a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Today */
+.CalendarTodaySchool {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #777777; border-right: 1px solid #777777;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #000000;
+	}
+
+.CalendarTodaySchool a:link {
+	color: #0033cc;
+	}
+
+.CalendarTodaySchool a:visited{
+	color: #840084;
+	}
+
+.CalendarTodaySchool a:hover, .CalendarTodaySchool a:active {
+	color: #ff0000;
+	}
+
+/* Calendar Weekend Today */
+.CalendarWeekendTodaySchool {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #777777; border-right: 1px solid #777777;
+	text-align: center;
+	background-color: #ececec;	
+	color: #000000;
+	}
+
+.CalendarWeekendTodaySchool a:link {
+	color: #0033cc;
+	}
+
+.CalendarWeekendTodaySchool a:visited{
+	color: #840084;
+	}
+
+.CalendarWeekendTodaySchool a:hover, .CalendarWeekendTodaySchool a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Day */
+.CalendarOtherMonthDaySchool{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #777777;
+	}
+
+.CalendarOtherMonthDaySchool a:link {
+	color: #777777;
+	}
+
+.CalendarOtherMonthDaySchool a:visited{
+	color: #777777;
+	}
+
+.CalendarOtherMonthDaySchool a:hover, .CalendarOtherMonthDaySchool a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Today */
+.CalendarOtherMonthTodaySchool {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #777777; border-right: 1px solid #777777;
+	text-align: center;
+	background-color: #f7f7f7;	
+	color: #777777;
+	}
+
+.CalendarOtherMonthTodaySchool a:link {
+	color: #777777;
+	}
+
+.CalendarOtherMonthTodaySchool a:visited{
+	color: #777777;
+	}
+
+.CalendarOtherMonthTodaySchool a:hover, .CalendarOtherMonthTodaySchool a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend */
+.CalendarOtherMonthWeekendSchool {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	text-align: center;
+	background-color: #ececec;	
+	color: #777777;
+	}
+
+.CalendarOtherMonthWeekendSchool a:link {
+	color: #777777;
+	}
+
+.CalendarOtherMonthWeekendSchool a:visited{
+	color: #777777;
+	}
+
+.CalendarOtherMonthWeekendSchool a:hover, .CalendarOtherMonthWeekendSchool a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Other Month's Weekend Today */
+.CalendarOtherMonthWeekendTodaySchool {
+	font-family: Tahoma; font-size: 80%;
+	padding: 1px;
+	border: 2px solid #777777; border-right: 1px solid #777777;
+	text-align: center;
+	color: #777777;
+	background-color: #ececec;	
+	}
+
+.CalendarOtherMonthWeekendTodaySchool a:link {
+	color: #777777;
+	}
+
+.CalendarOtherMonthWeekendTodaySchool a:visited{
+	color: #777777;
+	}
+
+.CalendarOtherMonthWeekendTodaySchool a:hover, .CalendarOtherMonthWeekendTodaySchool a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Selected Day (for DatePicker) */
+.CalendarSelectedDaySchool{
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	border-left: 1px solid #777777;
+	background-color: #d7d7d7;
+	color: #000000;
+	text-align: center;
+	font-weight: bold;
+	}
+
+.CalendarSelectedDaySchool a:link {
+	color: #000000;
+	}
+
+.CalendarSelectedDaySchool a:visited{
+	color: #000000;
+	}
+
+.CalendarSelectedDaySchool a:hover, .CalendarSelectedDaySchool a:active{
+	color: #ff0000;
+	}
+
+/* Calendar Navigator */
+.CalendarNavigatorSchool {
+	font-family: Tahoma; font-size: 80%;
+	padding: 3px;
+	background-image: url('Images/CaptionBg.gif'); color: #000000;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	color: #000000;
+	}
+
+.CalendarNavigatorSchool a:link {
+	color: #0033cc;
+	}
+
+.CalendarNavigatorSchool a:visited{
+	color: #840084;
+	}
+
+.CalendarNavigatorSchool a:hover, .CalendarNavigatorSchool a:active{
+	color: #ff0000;
+	}
+
+.CalendarNavigatorSchool img{
+	margin: 2px;
+	vertical-align: middle; 	
+	}
+
+/* Calendar Extra */
+.CalendarEventSchool{
+	font-size: 80%;
+	text-align: left;
+	}
+
+.CalendarEventSchool a:link {
+	color: #0033cc;
+	}
+
+.CalendarEventSchool a:visited{
+	color: #840084;
+	}
+
+.CalendarEventSchool a:hover, .CalendarEventSchool a:active{
+	color: #ff0000;
+	}

@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:CCS_RecordFormPrefix} {res:events}</title>
+<script language="JavaScript" type="text/javascript">
+var AllDayState;
+var RepeatState;
+
+window.onload = function() {
+        AllDayState = document.getElementById("AllDayEvent").checked;
+        changestate();
+        document.getElementById("AllDayEvent").onclick = function() {
+        	AllDayState = !AllDayState;
+        	changestate();
+        }
+
+        if (document.getElementById("RepeatEvent")) {
+			RepeatState = document.getElementById("RepeatEvent").checked;
+			HideShowRepeat();
+        	document.getElementById("RepeatEvent").onclick = function() {
+        		RepeatState = !RepeatState;
+	        	HideShowRepeat();
+    	    }
+		}
+		CorrectEndTime("hour");
+}
+
+function changestate() {
+        if (AllDayState) {
+                document.getElementById("hour_start").disabled = true;
+                document.getElementById("minute_start").disabled = true;
+                document.getElementById("hour_end").disabled = true;
+                document.getElementById("minute_end").disabled = true;
+        } else {
+                document.getElementById("hour_start").disabled = false;
+                document.getElementById("minute_start").disabled = false;
+                document.getElementById("hour_end").disabled = false;
+                document.getElementById("minute_end").disabled = false;
+        }
+}
+
+function HideShowRepeat() {
+        if (RepeatState) {
+                document.getElementById("RepeatRow1").style.display = "";
+                document.getElementById("RepeatRow2").style.display = "";
+        } else {
+                document.getElementById("RepeatRow1").style.display = "none";
+                document.getElementById("RepeatRow2").style.display = "none";
+        }
+}
+
+function CorrectListBoxVal(Type, flag) {
+	var HourStartComp = document.getElementById(Type + "_start");
+	var HourEndComp = document.getElementById(Type + "_end");
+
+	var CurrStartTime = flag? HourStartComp.selectedIndex : 0;
+	var SelEndTime = HourEndComp.selectedIndex;
+	var EndTimeLength = HourEndComp.options.length;
+	var StartTimeLength = HourStartComp.options.length;
+
+	for (var i=0; i<EndTimeLength; i++)
+		HourEndComp.options[0] = null;
+	for (i = CurrStartTime; i<StartTimeLength; i++)
+		HourEndComp.options[i-CurrStartTime] = new Option(HourStartComp.options[i].text, HourStartComp.options[i].value);
+
+	if (SelEndTime-CurrStartTime+StartTimeLength-EndTimeLength < 0)
+		HourEndComp.options[0].selected = true;
+	else
+		HourEndComp.options[SelEndTime-CurrStartTime+StartTimeLength-EndTimeLength].selected = true;
+}
+
+function CorrectEndTime(Type) {
+	if (Type == "hour");
+		CorrectListBoxVal("hour", true);
+
+	var HourStartComp = document.getElementById("hour_start");
+	var HourEndComp = document.getElementById("hour_end");
+
+	var CurrStartHour = HourStartComp.options.length - HourStartComp.selectedIndex;
+	var CurrEndHour = HourEndComp.options.length - HourEndComp.selectedIndex;
+
+	CorrectListBoxVal("minute", CurrStartHour == CurrEndHour);
+}
+</script>
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-CD196667
+</script>
+<script language="JavaScript" src="ClientI18N.php?file=DatePicker.js&locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-B949F285
+
+var events_rec_DatePicker_event_date = new Object(); 
+events_rec_DatePicker_event_date.format           = "ShortDate";
+events_rec_DatePicker_event_date.style            = "Styles/{CCS_Style}/Style.css";
+events_rec_DatePicker_event_date.relativePathPart = "";
+events_rec_DatePicker_event_date.themeVersion     = "3.0";
+
+var events_rec_DatePicker_event_todate = new Object(); 
+events_rec_DatePicker_event_todate.format           = "ShortDate";
+events_rec_DatePicker_event_todate.style            = "Styles/{CCS_Style}/Style.css";
+events_rec_DatePicker_event_todate.relativePathPart = "";
+events_rec_DatePicker_event_todate.themeVersion     = "3.0";
+
+//End Date Picker Object Definitions
+
+//End CCS script
+</script>
+<link href="Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{header} 
+<table cellspacing="5" cellpadding="0" border="0">
+  <tr>
+    <td valign="top">
+      <!-- Left column -->
+      {vertical_menu}</td> 
+    <td valign="top">
+      <!-- Right column -->
+      <!-- BEGIN Record events_rec -->
+      <form name="{HTMLFormName}" action="{Action}" method="post">
+        <table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td valign="top">
+              <table class="Header" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="HeaderLeft"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                  <th>{res:CCS_RecordFormPrefix} {res:events}
+                  {res:CCS_RecordFormSuffix}</th>
+ 
+                  <td class="HeaderRight"><img src="Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+                </tr>
+ 
+              </table>
+ 
+              <table class="Record" cellspacing="0" cellpadding="0">
+                <!-- BEGIN Error -->
+                <tr class="Error">
+                  <td colspan="2">{Error}</td> 
+                </tr>
+ <!-- END Error -->
+                <tr class="Controls">
+                  <th>{res:cal_category}</th>
+ 
+                  <td>
+                    <select name="{category_id_Name}">
+                      <option value="" selected>{res:CCS_SelectValue}</option>
+ {category_id_Options} 
+                    </select>
+ </td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>{res:event_title}&nbsp;*</th>
+ 
+                  <td><input maxlength="100" size="50" value="{event_title}" name="{event_title_Name}"></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>{res:event_desc}&nbsp;</th>
+ 
+                  <td><textarea name="{event_desc_Name}" rows="5" cols="50">{event_desc}</textarea></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>{res:event_time}</th>
+ 
+                  <td>
+                    <select id="hour_start" name="{event_time_hrs_Name}" onchange="CorrectEndTime('hour');">
+                      {event_time_hrs_Options} 
+                    </select>
+ : 
+                    <select id="minute_start" name="{event_time_mns_Name}" onchange="CorrectEndTime('');">
+                      {event_time_mns_Options} 
+                    </select>
+ </td> 
+                </tr>
+ 
+                <tr class="Controls" valign="top">
+                  <th>{res:cal_time_end}</th>
+ 
+                  <td>
+                    <select id="hour_end" name="{time_hrs_end_Name}" onchange="CorrectEndTime('');">
+                      {time_hrs_end_Options} 
+                    </select>
+ : 
+                    <select id="minute_end" name="{time_mns_end_Name}">
+                      {time_mns_end_Options} 
+                    </select>
+ <br>
+                    <span nowrap><input id="AllDayEvent" type="checkbox" value="1" name="{allday_Name}" {allday}>{res:cal_all_day} </span></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>{res:event_date}&nbsp;*</th>
+ 
+                  <td><input maxlength="10" size="10" value="{event_date}" name="{event_date_Name}">
+                    <!-- BEGIN DatePicker DatePicker_event_date --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');"><img src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_event_date --><br>
+                  </td> 
+                </tr>
+ 
+                <!-- BEGIN CheckBox RepeatEvent -->
+                <tr class="Controls">
+                  <th>{res:Recurrence}&nbsp;</th>
+ 
+                  <td><input id="RepeatEvent" type="checkbox" value="1" name="{RepeatEvent_Name}" {RepeatEvent}></td> 
+                </tr>
+ <!-- END CheckBox RepeatEvent -->
+                <tr id="RepeatRow1" class="Controls" style="display:none">
+                  <th style="border-bottom:none;text-align:right">&nbsp;{res:Every}</th>
+ 
+                  <td style="border-bottom:none"><span nowrap><input type="text" name="{RepeatNum_Name}" value="{RepeatNum}" size="5" maxlength="5">
+                    <select name="{RepeatType_Name}">
+                      {RepeatType_Options} 
+                    </select>
+ </span> </td> 
+                </tr>
+ 
+                <tr id="RepeatRow2" class="Controls" style="display:none">
+                  <th style="border-top:none;text-align:right">&nbsp;{res:End_By}</th>
+ 
+                  <td style="border-top:none"><span nowrap><input maxlength="10" size="10" value="{event_todate}" name="{event_todate_Name}">
+                    <!-- BEGIN DatePicker DatePicker_event_todate --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');"><img src="Styles/{CCS_Style}/Images/DatePicker.gif" border="0"></a><!-- END DatePicker DatePicker_event_todate --></span></td> 
+                </tr>
+ 
+                <tr class="Controls">
+                  <th>{res:event_is_public}</th>
+ 
+                  <td><input type="checkbox" value="1" name="{event_is_public_Name}" {event_is_public}>{res:event_is_public_desc} </td> 
+                </tr>
+ 
+                <!-- BEGIN Panel PanelLocation -->
+                <tr class="Controls">
+                  <th>{LabelLocation}</th>
+ 
+                  <td><textarea name="{event_location_Name}" cols="50">{event_location}</textarea></td> 
+                </tr>
+ <!-- END Panel PanelLocation -->
+                <!-- BEGIN Panel PanelCost -->
+                <tr class="Controls">
+                  <th>{LabelCost}</th>
+ 
+                  <td><input value="{event_cost}" name="{event_cost_Name}"></td> 
+                </tr>
+ <!-- END Panel PanelCost -->
+                <!-- BEGIN Panel PanelURL -->
+                <tr class="Controls">
+                  <th>{LabelURL}</th>
+ 
+                  <td><input size="40" value="{event_URL}" name="{event_URL_Name}"></td> 
+                </tr>
+ <!-- END Panel PanelURL -->
+                <!-- BEGIN Panel PanelTextBox1 -->
+                <tr class="Controls">
+                  <th>{LabelTextBox1}</th>
+ 
+                  <td><input maxlength="100" size="50" value="{TextBox1}" name="{TextBox1_Name}"></td> 
+                </tr>
+ <!-- END Panel PanelTextBox1 -->
+                <!-- BEGIN Panel PanelTextBox2 -->
+                <tr class="Controls">
+                  <th>{LabelTextBox2}</th>
+ 
+                  <td><input maxlength="100" size="50" value="{TextBox2}" name="{TextBox2_Name}"></td> 
+                </tr>
+ <!-- END Panel PanelTextBox2 -->
+                <!-- BEGIN Panel PanelTextBox3 -->
+                <tr class="Controls">
+                  <th>{LabelTextBox3}</th>
+ 
+                  <td><input maxlength="100" size="50" value="{TextBox3}" name="{TextBox3_Name}"></td> 
+                </tr>
+ <!-- END Panel PanelTextBox3 -->
+                <!-- BEGIN Panel PanelTextArea1 -->
+                <tr class="Controls">
+                  <th>{LabelTextArea1}</th>
+ 
+                  <td><textarea name="{TextArea1_Name}" cols="50">{TextArea1}</textarea></td> 
+                </tr>
+ <!-- END Panel PanelTextArea1 -->
+                <!-- BEGIN Panel PanelTextArea2 -->
+                <tr class="Controls">
+                  <th>{LabelTextArea2}</th>
+ 
+                  <td><textarea name="{TextArea2_Name}" cols="50">{TextArea2}</textarea></td> 
+                </tr>
+ <!-- END Panel PanelTextArea2 -->
+                <!-- BEGIN Panel PanelTextArea3 -->
+                <tr class="Controls">
+                  <th>{LabelTextArea3}</th>
+ 
+                  <td><textarea name="{TextArea3_Name}" cols="50">{TextArea3}</textarea></td> 
+                </tr>
+ <!-- END Panel PanelTextArea3 -->
+                <!-- BEGIN Panel PanelCheckBox1 -->
+                <tr class="Controls">
+                  <th>{LabelCheckBox1}</th>
+ 
+                  <td><input type="checkbox" value="1" name="{CheckBox1_Name}" {CheckBox1}></td> 
+                </tr>
+ <!-- END Panel PanelCheckBox1 -->
+                <!-- BEGIN Panel PanelCheckBox2 -->
+                <tr class="Controls">
+                  <th>{LabelCheckBox2}</th>
+ 
+                  <td><input type="checkbox" value="1" name="{CheckBox2_Name}" {CheckBox2}></td> 
+                </tr>
+ <!-- END Panel PanelCheckBox2 -->
+                <!-- BEGIN Panel PanelCheckBox3 -->
+                <tr class="Controls">
+                  <th>{LabelCheckBox3}</th>
+ 
+                  <td><input type="checkbox" value="1" name="{CheckBox3_Name}" {CheckBox3}></td> 
+                </tr>
+ <!-- END Panel PanelCheckBox3 -->
+                <!-- BEGIN Panel PanelRecurrentSubmit -->
+                <tr class="Controls">
+                  <th>&nbsp;</th>
+ 
+                  <td><input type="checkbox" value="1" name="{RecurrentApply_Name}" {RecurrentApply}><b>{res:cal_RecurrentApply}</b><input type="hidden" name="{event_parent_id_Name}" value="{event_parent_id}"></td> 
+                </tr>
+ <!-- END Panel PanelRecurrentSubmit -->
+                <tr class="Bottom">
+                  <td align="right" colspan="2"><input type="hidden" value="{user_id}" name="{user_id_Name}"><input type="hidden" value="{event_time}" name="{event_time_Name}"><input type="hidden" value="{event_time_end}" name="{event_time_end_Name}">
+                    <!-- BEGIN Button Button_Insert --><input type="image" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonInsert.gif" value="{res:CCS_Insert}" border="0" name="{Button_Name}"><!-- END Button Button_Insert -->
+                    <!-- BEGIN Button Button_Update --><input type="image" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" border="0" name="{Button_Name}"><!-- END Button Button_Update -->
+                    <!-- BEGIN Button Button_Delete --><input type="image" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonDelete.gif" value="{res:CCS_Delete}" border="0" name="{Button_Name}"><!-- END Button Button_Delete -->
+                    <!-- BEGIN Button Button_Cancel --><input type="image" src="Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonCancel.gif" value="{res:CCS_Cancel}" border="0" name="{Button_Name}"><!-- END Button Button_Cancel --></td> 
+                </tr>
+ 
+              </table>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+      </form>
+ <!-- END Record events_rec --><br>
+    </td> 
+  </tr>
+</table>
+{footer} 
+</body>
+</html>

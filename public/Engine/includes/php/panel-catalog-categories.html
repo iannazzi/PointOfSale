@@ -1,0 +1,50 @@
+{foreach from=$categories item="category"}
+{if $parent == $category.cid}
+<div class="head_next">{$category.name}</div>
+{if $category.short_description neq ''}
+	<div id="leftbartxt">
+		<div class="lefttest">
+					{$category.short_description|truncate:590:"":true}
+		</div>
+	</div>
+{/if}
+{/if}
+{/foreach}
+	{if $current_page neq 'catalog'}
+	<div class="panel-catalog-categories panel clearfix {class file=$smarty.template editable=true draggable=true}">
+	<div id="leftbartxt">
+	<div class="lefttest">
+	
+		<ul class="{if $DesignSideMenuStyle=="drop-down"}drop-down-menu drop-down-menu-vertical {else}tree{/if}">
+			{include file="templates/panels/includes/panel-catalog-categories-item.html"}
+			{if $enable_gift_cert == 'Yes'}
+			<li><span><a href="{$GlobalHttpUrl}/index.php?p=gift_certificate">Gift Certificates</a></span></li>
+			{/if}
+		</ul>
+		
+		
+		{if $CatalogUsePriceRanges == "1" && $current_page == "catalog"}
+			<b>{$msg.catalog.price_filter}</b>
+	
+			{if $CatalogPriceRange > 0}
+				[<a href="{$url_http}p=catalog&amp;mode={$catalog_mode}&amp;CatalogSetPriceRange=0&amp;parent={$parent}{if $catalog_mode == "search"}&amp;search_str={$search_str|htmlspecialchars}&amp;search_in={$search_in}{/if}{if $catalog_mode == "manufacturer"}&amp;mid={$manufacturer.manufacturer_id}{/if}">{$msg.catalog.cancel_price_filter}</a>]					
+			{/if}
+			<br/>
+			<div style="padding-left:13px;padding-bottom:5px;">
+			{foreach from=$catalog_price_ranges item="price_range" key="price_range_key"}
+				{if $price_range.min != "" && $price_range.max != ""}
+				<div style="padding-top:3px;">
+					<a href="{$url_http}p=catalog&amp;mode={$catalog_mode}&amp;CatalogSetPriceRange={$price_range_key}&amp;parent={$parent}{if $catalog_mode == "search"}&amp;search_str={$search_str|htmlspecialchars}&amp;search_in={$search_in}{/if}{if $catalog_mode == "manufacturer"}&amp;mid={$manufacturer.manufacturer_id}{/if}">
+						{if $price_range_key == $CatalogPriceRange}<b>{/if}
+						{$price_range.min|price} - {$price_range.max|price}
+						{if $price_range_key == $CatalogPriceRange}</b>{/if}
+					</a>
+				</div>
+				{/if}
+			{/foreach}
+			</div>
+		{/if}
+	</div>
+</div>
+</div>
+{/if}

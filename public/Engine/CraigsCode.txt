@@ -1,0 +1,74 @@
+multi user application:
+
+someone signs up... we need a unique account name.
+that name gets assigned a unique number.
+this goes in a system database
+
+user goes to login page. Login page includes the system administration database
+login asks for company, user, password
+company will typically be prepoulated
+company gets set in a cookie.
+
+the company is looked up in the database to find the account key.
+if that is sucessful the code 
+		-includes the correct config file 
+		- or returns an array of db_user/password?
+		-sets $_SESSION['ACCOUNT_KEY']
+Then user/password is looked up in the account database
+
+then when accessing, the code:
+checks system_status.... a file we create for issues... like upgrades, server down. 
+checks $_SESSION['account_key']
+includes the correct config file (try to make path independent)
+checks user as normal
+
+
+to shut the system down we would need to modify a value somewhere????
+index.php has to look up the correct config file
+
+
+User now logs in with user company
+
+config file stored above public_html. can be folder/file both named by the account.
+	-DB Username
+	-DB Password
+	Encryption salt - pregenerated? yes
+	account_key
+	account_status - locked etc....
+	
+In the database we would then need
+
+	code version using ... no/yes? databases automatically upgrade when we release them.
+
+then in public_html we would have 	CraigsCode
+										CC_VERSION_2015_04_02.1
+											UPGRADE_PATH?
+											ENGINE
+											3rdParty
+											index.php
+										CC_VERSION_2015_05_02.1
+										CC_VERSION_2015_05_02.2
+									CraigsAdminCode
+										CC_DATABASE
+											CC_DB_VERSION_2015_04_02.1
+											CC_DB_VERSION_2015_05_02.1
+										SYSTEM_DATABASE
+											SY_DB_VERSION_etc
+										SYSTEM_CODE
+											SY_VERSION_etc
+									ACCOUNTS	
+										ACCOUNT_NAME
+											DATAFILES
+												IMAGES
+												PRINTQUEUE
+											BACKUPS
+									
+THE SYSTEM DATABASE has a table
+account account_name account status account key database name database password
+
+These values get written to the config file so the po_users
+
+
+
+
+

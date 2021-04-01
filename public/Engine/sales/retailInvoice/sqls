@@ -1,0 +1,27 @@
+List the checks
+
+SELECT
+pos_sales_invoice.pos_sales_invoice_id, pos_sales_invoice.invoice_number, pos_customer_payment_methods.payment_type, pos_sales_invoice.invoice_date, pos_customer_payments.payment_amount
+
+FROM pos_sales_invoice
+
+LEFT JOIN pos_sales_invoice_to_payment ON pos_sales_invoice.pos_sales_invoice_id = pos_sales_invoice_to_payment.pos_sales_invoice_id
+LEFT JOIN pos_customer_payments	ON pos_sales_invoice_to_payment.pos_customer_payment_id = pos_customer_payments.pos_customer_payment_id
+LEFT JOIN pos_customer_payment_methods ON pos_customer_payments.pos_customer_payment_method_id = pos_customer_payment_methods.pos_customer_payment_method_id
+
+
+WHERE pos_customer_payment_methods.payment_type = 'Check'
+
+ORDER BY invoice_date ASC
+
+
+*******************Missing payment info
+
+SELECT
+pos_sales_invoice.pos_sales_invoice_id, invoice_number, invoice_date, first_name, last_name
+
+FROM pos_sales_invoice
+LEFT join pos_employees USING (pos_employee_id)
+
+WHERE pos_sales_invoice_id NOT IN (SELECT pos_sales_invoice_id FROM
+ pos_sales_invoice_to_payment)

@@ -1,0 +1,6 @@
+'Formatting info @0-97E58FA2
+en|en|US|Yes;No;|2|.|,|January;February;March;April;May;June;July;August;September;October;November;December|Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec|Sunday;Monday;Tuesday;Wednesday;Thursday;Friday;Saturday|Sun;Mon;Tue;Wed;Thu;Fri;Sat|m!/!d!/!yyyy|dddd!, !mmmm! !dd!, !yyyy|h!:!nn! !tt|h!:!nn!:!ss! !tt|0|AM|PM|utf-8|65001|0|0|S;M;T;W;T;F;S|1033
+de|de|DE|Ja;Nein;|2|,|.|Januar;Februar;März;April;Mai;Juni;Juli;August;September;Oktober;November;Dezember|Jan;Feb;Mrz;Apr;Mai;Jun;Jul;Aug;Sep;Okt;Nov;Dez|Sonntag;Montag;Dienstag;Mittwoch;Donnerstag;Freitag;Samstag|So;Mo;Di;Mi;Do;Fr;Sa|dd!.!mm!.!yyyy|dddd!, !d!. !mmmm! !yyyy|HH!:!nn|HH!:!nn!:!ss|1|||utf-8|65001|0|0|S;M;D;M;D;F;S|1031
+ru|ru|RU|Да;Нет;|2|,| |Январь;Февраль;Март;Апрель;Май;Июнь;Июль;Август;Сентябрь;Октябрь;Ноябрь;Декабрь|янв;фев;мар;апр;май;июн;июл;авг;сен;окт;ноя;дек|воскресенье;понедельник;вторник;среда;четверг;пятница;суббота|Вс;Пн;Вт;Ср;Чт;Пт;Сб|mm!.!dd!.!yyyy|d! !mmmm! !yyyy! г.|H!:!nn|H!:!nn!:!ss|1|||utf-8|65001|0|0|В;П;В;С;Ч;П;С|1049
+'End Formatting info
+

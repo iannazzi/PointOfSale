@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>{res:config}</title>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="cache-control" content="no-cache">
+<link href="../Styles/{CCS_Style}/Style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+{header} 
+<!-- BEGIN EditableGrid config -->
+<form name="{HTMLFormName}" action="{Action}" method="post">
+  <input type="hidden" value="{FormState}" name="FormState">{FormScript} 
+  <table cellspacing="0" cellpadding="0" border="0">
+    <tr>
+      <td valign="top">
+        <table class="Header" cellspacing="0" cellpadding="0" border="0">
+          <tr>
+            <td class="HeaderLeft"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td> 
+            <th>{res:config}</th>
+            <td class="HeaderRight"><img src="../Styles/{CCS_Style}/Images/Spacer.gif" border="0"></td>
+          </tr>
+        </table>
+ 
+        <table class="Grid" cellspacing="0" cellpadding="0">
+          <!-- BEGIN Error -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END Error -->
+          <tr class="Caption">
+            <th>{res:config_desc}</th>
+ 
+            <th>{res:config_value}</th>
+          </tr>
+ 
+          <!-- BEGIN Row -->
+          <!-- BEGIN RowError -->
+          <tr class="Error">
+            <td colspan="2">{Error}</td>
+          </tr>
+          <!-- END RowError -->
+		  <!-- BEGIN Label config_category -->
+		  <tr class="GroupCaption">
+			<th colspan="2">{config_category}</th>
+		  </tr>
+		  <!-- END Label config_category -->
+          <tr class="Row">
+            <td>{config_desc}</td> 
+            <td>
+              <!-- BEGIN CheckBox Check_value --><input type="checkbox" value="1" name="{Check_value_Name}" {Check_value}><!-- END CheckBox Check_value -->
+              <!-- BEGIN TextBox Box_value --><input value="{Box_value}" size="45" name="{Box_value_Name}"><!-- END TextBox Box_value -->
+              <!-- BEGIN TextArea Area_value --><textarea name="{Area_value_Name}" rows="5" cols="50">{Area_value}</textarea><!-- END TextArea Area_value -->
+              <!-- BEGIN ListBox ListBox_value --><select name="{ListBox_value_Name}">{ListBox_value_Options}</select><!-- END ListBox ListBox_value -->
+			  <input type="hidden" value="{value_type}" name="{value_type_Name}">
+			  <input type="hidden" name="{ListBox_Values_Name}" value="{ListBox_Values}"></td>
+          </tr>
+ <!-- END Row -->
+          <!-- BEGIN NoRecords -->
+          <tr class="NoRecords">
+            <td colspan="2">{res:CCS_NoRecords}</td>
+          </tr>
+          <!-- END NoRecords -->
+          <tr class="Footer">
+            <td style="TEXT-ALIGN: right" colspan="2">
+			  <!-- BEGIN Button ButtonSubmit --><input type="image" src="../Styles/{CCS_Style}/Images/{res:CCS_LanguageID}/ButtonUpdate.gif" value="{res:CCS_Update}" border="0" name="{Button_Name}"><!-- END Button ButtonSubmit -->
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</form>
+<!-- END EditableGrid config -->
+</body>
+</html>

@@ -1,0 +1,76 @@
+1.1.5 [PHP] released on 2006-05-30
+  - Fixes of the following bugs:
+     - JavaScript error while forming the end time listbox
+     - Event sorting error in the Day View
+     - Fixed time display format in the Search form 
+     - Fixed the week icon shown in the Year View 
+     - Fixed the Event Add/Edit form to set the event date in the current date format
+	
+  
+  - New Features / Enhancements / Changes:
+	+ Added mini_calendar page, which can be included into IFRAME
+	+ Added German
+	+ Modified the Search form
+	+ Modified the Event Add/Edit form to show the time in the selected format
+	+ Added the new parameter into the Configuration allowing to change Style for 
+	  day with events in the info_calendar and Year Views 
+	+ Modified the installation allowing to make site setting if there are insufficient 
+	  access rights for Common.php from the Web 
+
+
+1.1.2 [PHP] released on 2006-04-26
+  - Fixes of the following bugs:
+     - the registration link was not removed from the login page if the registration is disabled
+     - incorrect returned parameter by the SendEmailMessage functions.  
+     - events were not shown if a category is deleted
+     - time was not editable for recurrent events
+     - fixed <? to <?php  in the common  files .  
+  
+  - New Features / Enhancements / Changes:
+	+ improved Remind Password feature to prevent unwanted password change. 
+	  To do this the user_hash field was added into the 'users' table 
+	  (please see VCalendar_MySQL_update.sql in the install folder).
+
+
+1.1.0 [PHP] released on 2006-04-11
+
+  - Fixes of the following bugs reported on SourceForge:
+        1440434: install sql error - syntax error
+        1454268: Errors w/ new user registration
+        1454272: Theme changes w/ category
+        1454296: Bad Display After Changing Password
+        1457761: Script Error To: griffey13
+        1457699: Time Validation
+
+  - Other minor bugs.
+
+  - New Features / Enhancements / Changes:
+        + Speed optimized the SQL for selection events
+ 
+        + Added "Disable registration" in the configuration 
+	 (to remove registration option from menu)
+        + Discussions-3655058 text wrapping in the box in month view
+
+        + 1452477 -  Added date format selection for display (predefined times, 
+		    "Military", "US Standard") in the configuration
+
+        + Added permision access to private only for the owner
+
+        + 1458742  Added the last login time. The administrator is able to look at
+		  the time that each user last logged into the site.
+
+        + 1454275 Added the larger cost field. Now several prices with explanations
+		  can be included. (For example, as it was requested: 
+		  $5 for adults, $2 for children 12 and under.)
+
+
+1.0.2 [PHP] released on 2006-02-13
+- Minor code changes in the week_events.php to avoid the NOTICE in the week calendar. 
+
+
+1.0.1 [PHP] released on 2006-02-13
+- Fixed the installation bug with MySQL 5.0.
+
+
+1.0 [PHP] released on 2006-02-01
+	- intial version

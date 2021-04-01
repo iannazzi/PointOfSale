@@ -1,0 +1,58 @@
+INSTALLATION GUIDE
+VCalendar v 1.0  
+
+
+REQUIREMENTS
+------------
+
+- A web server (Apache or IIS) (Apache - http://httpd.apache.org/)
+- PHP 4.1.0 or above (http://www.php.net/)
+- MySQL 4.1.0 or above (http://www.mysql.com/)
+
+
+INSTALLATION 
+------------
+- Download the latest VCalendar version
+- Unzip the VCalendar zip file into your webroot. 
+
+
+INSTALL VCALENDAR WITH THE INSTALLATION WIZARD
+ 	   
+1. Open the http://<yourServer>/<VCalendarDirectory> / directory in the browser. 
+You will be redirected to the Installation Wizard. 
+Click Start Installation to begin
+
+2. On Step 2 the following database parameters are specified in "SQL Environment":
+	SQL Host - name of the SQL Host of the database server. 
+		If the database server is located on the same server, 'localhost' is used.
+	SQL UserName - user account used to access the database.
+	SQL Password - password used with the SQL User name.
+	SQL Database Name - MySQL database name.
+
+	To create a new database: 
+	a. Check "Create database" checkbox. 
+	b. In new section "Database administrator account" specify the login and password 
+           of a MySQL user. The user should have rights to create databases.
+
+3. In section "Admin's Account" enter the administrator login and password 
+   and click on the 'Submit' button.
+
+4. On Step 3 click on 'Start' to run Vcalendar
+
+
+INSTALL VCALENDAR BY MANUAL
+
+1.Creating MySQL database
+
+	a. Create the database using mysqladmin or phpMyAdmin
+	mysqladmin -udb_user -pdb_pass create vcalendar3
+
+	b. Create tables using the script from install/VCalendar_MySQL.sql 
+	mysql -uuser -ppass dbname < VCalendar_MySQL.sql
+
+2. Set the site configuration. In VCalendar root folder open Common.php to edit the following
+	a. In lines from 25 to 29 sepcify the Database name, DB Host, Db login and password
+	b. In line 17 change false to true ($CalendarIsInstalled = true;). 
+	To run the installation wizard again set false in the global variable: $CalendarIsInstalled = false;
+
+
